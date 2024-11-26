@@ -85,7 +85,10 @@ subscriber.on('message', async (channel, message) => {
   }
 });
 
-// HTTP Endpoint to trigger task
+app.get('/', (req, res) => {
+  res.redirect('https://isph-sse.vercel.app');
+});
+
 app.post('/trigger-task', async (req, res) => {
   const { eventId } = req.body; // Extract from JSON payload
 
