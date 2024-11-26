@@ -19,10 +19,7 @@ async function saveEvaluation(eventId, evaluation) {
   };
 
   // set processed flag of the event to true
-  const eventRefEvaluated = ref(
-    database,
-    `events/${eventId}/evaluatedevaluated`
-  );
+  const eventRefEvaluated = ref(database, `events/${eventId}/evaluated`);
   await set(eventRefEvaluated, true);
 
   // Save the evaluation to the database
