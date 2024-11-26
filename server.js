@@ -3,8 +3,18 @@ const ioredis = require('ioredis');
 const { generateEvaluation } = require('./services/evaluation');
 const { getEventData, saveEvaluation } = require('./services/dbService');
 
+const cors = require('cors');
+
+// Configure CORS
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST'],
+  allowedHeaders: '*',
+};
+
 const app = express();
 app.use(express.json());
+app.use(cors(corsOptions));
 const port = process.env.PORT || 3000;
 
 const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
