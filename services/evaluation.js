@@ -114,7 +114,19 @@ async function generateEvaluationGemini(event, stockList) {
     const result = await chatSession.sendMessage(prompt);
 
     // Extract and return the text response
-    return result.response.text().trim() || 'No evaluation generated.';
+    // Extract between ```json and ```
+    const response = result.response.text().trim();
+    const start = response.indexOf('```json') + 7;
+    const end = response.indexOf('```', start);
+
+    console.log('____________________________________________________________');
+    console.log('Response:', response.substring(start, end).trim());
+
+    // convert to JSON
+    const json = JSON.parse(response.substring(start, end).trim());
+    console.log('JSON:', json);
+    console.log('____________________________________________________________');
+    return json || 'No evaluation generated.';
   } catch (error) {
     console.error('Error generating evaluation with Gemini:', error);
     return 'Error in generating evaluation with Gemini.';
