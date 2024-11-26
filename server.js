@@ -19,6 +19,8 @@ const port = process.env.PORT || 3000;
 
 const redisUrl = process.env.REDIS_URL;
 
+console.log('Redis URL:', redisUrl);
+
 // Set up Redis connection
 const redis = new ioredis(redisUrl);
 
