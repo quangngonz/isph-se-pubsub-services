@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cors(corsOptions));
 const port = process.env.PORT || 3000;
 
-const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
+const redisUrl = process.env.REDIS_URL;
 
 // Set up Redis connection
 const redis = new ioredis(redisUrl);
