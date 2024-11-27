@@ -40,7 +40,7 @@ const generationConfig = {
  * @param {Array} stockList - The list of stocks.
  * @returns {string} - The generated prompt.
  */
-function generatePrompt(event, stockList) {
+function generateEvalPrompt(event, stockList) {
   return `
     Event Name: ${event.event_name}
     Description: ${event.event_description}
@@ -69,6 +69,12 @@ function generatePrompt(event, stockList) {
   `;
 }
 
+function generateProjectionPrompt(event, stockList) {
+  return `Project the effectiveness of the event ${event} based on the following stocks: ${stockList.join(
+    ', '
+  )}.`;
+}
+
 /**
  * Generate evaluation using OpenAI.
  * @param {Object} event - The event data.
@@ -76,7 +82,7 @@ function generatePrompt(event, stockList) {
  * @returns {Promise<string>} - The evaluation response or an error message.
  */
 async function generateEvaluationOpenAI(event, stockList) {
-  const prompt = generatePrompt(event, stockList);
+  const prompt = generateEvalPrompt(event, stockList);
 
   try {
     const response = await openai.chat.completions.create({
@@ -101,7 +107,7 @@ async function generateEvaluationOpenAI(event, stockList) {
  * @returns {Promise<string>} - The evaluation response or an error message.
  */
 async function generateEvaluationGemini(event, stockList) {
-  const prompt = generatePrompt(event, stockList);
+  const prompt = generateEvalPrompt(event, stockList);
 
   try {
     // Start a chat session
@@ -162,6 +168,13 @@ async function generateEvaluation(event) {
 }
 
 async function projectEffectiveness(event) {
+  // Get stock list from /stocks endpoint
+  const stocksRef = ref(database, 'stocks');
+  const stock = await get(stocksRef);
+
+  // TODO: Implement the projection logic
+  const prompt = generateProjectionPrompt(event, Object.keys(stock.val()));
+
   console.log('Evaluation result:', { evaluation });
 }
 
