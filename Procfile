@@ -1,2 +1,2 @@
 web: npm start
-engine: npm start-engine
+engine: npm run start-engine
