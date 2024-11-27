@@ -1,7 +1,7 @@
-const { generateEvaluation } = require('../services/evaluationService');
-const { getEventData, saveEvaluation } = require('../services/dbService');
+const { projectEffectiveness } = require('../services/evaluationService');
+const { getEventData, saveProjection } = require('../services/dbService');
 
-const processEvent = async (message) => {
+const processEffectiveness = async (message) => {
   const taskData = JSON.parse(message);
   const { eventId } = taskData;
 
@@ -19,15 +19,16 @@ const processEvent = async (message) => {
     console.log('Retrieved event data:', { eventData });
 
     // Call the evaluation function
-    const evaluation = await generateEvaluation(eventData);
+    const projection = await projectEffectiveness(eventData);
 
     console.log('Evaluation result:', { evaluation });
 
     // You can save the evaluation result back to your database or process it further here
-    await saveEvaluation(eventId, evaluation); // Replace with actual DB saving logic
+    await saveProjection(eventId, projection); // Replace with actual DB saving logic
   } catch (error) {
     console.error('Error processing task', { eventId, error: error.message });
   }
 };
 
-module.exports = { processEvent };
+// Export the function
+module.exports = { processEffectiveness };

@@ -29,4 +29,14 @@ async function saveEvaluation(eventId, evaluation) {
   console.log('Saved');
 }
 
-module.exports = { getEventData, saveEvaluation };
+async function saveProjection(eventId, projection) {
+  const eventRef = ref(database, `events/${eventId}/projection`);
+
+  // Save the projection to the database
+  await set(eventRef, projection);
+
+  console.log('Saving projection to database:', { eventId, projection });
+  console.log('Saved');
+}
+
+module.exports = { getEventData, saveEvaluation, saveProjection };

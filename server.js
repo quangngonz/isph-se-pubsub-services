@@ -51,6 +51,16 @@ subscriber.subscribe('event-evaluation-queue', async (err, count) => {
     console.error('Error subscribing to Redis channel', err);
     return;
   }
+  console.log(`Listening to 'event-evaluation-queue' channel`);
+  console.log(`Subscribed to ${count} channel(s)`);
+});
+
+subscriber.subscribe('event-projection-queue', (err, count) => {
+  if (err) {
+    console.error('Error subscribing to Redis channel', err);
+    return;
+  }
+  console.log(`Listening to 'event-projection-queue' channel`);
   console.log(`Subscribed to ${count} channel(s)`);
 });
 
@@ -60,6 +70,10 @@ subscriber.on('message', async (channel, message) => {
 
   if (channel === 'event-evaluation-queue') {
     await processEvent(message);
+  }
+
+  if (channel === 'event-projection-queue') {
+    console.log('Projection task received:', message);
   }
 });
 

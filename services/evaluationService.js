@@ -161,4 +161,8 @@ async function generateEvaluation(event) {
   }
 }
 
-module.exports = { generateEvaluation };
+async function projectEffectiveness(event) {
+  console.log('Evaluation result:', { evaluation });
+}
+
+module.exports = { generateEvaluation, projectEffectiveness };

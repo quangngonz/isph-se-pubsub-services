@@ -1,9 +1,9 @@
 import requests
 
 # Define the API endpoint
-url = "http://localhost:3000/trigger-task"  # Local
+# url = "http://localhost:3000/trigger-task"  # Local
 # url = "https://isph-sse.vercel.app/teacher/add-event"  # Vercel
-# url = "https://isph-se-pubsub-services-e18f2fd3b798.herokuapp.com/trigger-task" # Heroku
+url = "https://isph-se-pubsub-services-e18f2fd3b798.herokuapp.com/trigger-task" # Heroku
 
 # Test cases
 test_cases = [
