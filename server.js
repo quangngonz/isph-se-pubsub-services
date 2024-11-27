@@ -4,6 +4,11 @@ const ioredis = require('ioredis');
 
 const { processEvent } = require('./functions/proccessEvent');
 
+const engine = require('./engine');
+setInterval(() => {
+  engine.engine();
+}, 1000);
+
 // Configure CORS
 const corsOptions = {
   origin: '*',

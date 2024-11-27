@@ -2,7 +2,7 @@ const { database } = require('./services/firebaseService');
 const { ref, get } = require('firebase/database');
 
 // Create a loop that runs every 1000 milliseconds
-setInterval(async function () {
+const engine = async function () {
   //log current time
   console.log('Current time:', new Date().toISOString());
 
@@ -28,4 +28,6 @@ setInterval(async function () {
   // Log keys
 
   console.log('I am an engine running the ISPH Stock Exchange');
-}, 5000);
+};
+
+exports.engine = engine;
