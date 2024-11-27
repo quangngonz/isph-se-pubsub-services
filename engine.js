@@ -10,12 +10,22 @@ setInterval(async function () {
   const snapshot = await get(eventRef);
   const events = snapshot.val();
 
+  const exampleEvent = events[Object.keys(events)[0]];
+  const eventHeader = Object.keys(exampleEvent).join(', ');
+
+  // Colour code the output for eventHeader
+  console.log('Keys:', eventHeader);
+
+  console.log('____________________');
   for (const eventId in events) {
     const event = events[eventId];
     console.log('Event:', event.event_id);
+    console.log(event.event_name);
     console.log(event.event_description);
-    console.log('____________________');
   }
+  console.log('____________________');
+
+  // Log keys
 
   console.log('I am an engine running the ISPH Stock Exchange');
 }, 5000);
