@@ -1,9 +1,8 @@
 const express = require('express');
-const ioredis = require('ioredis');
-const { generateEvaluation } = require('./services/evaluation');
-const { getEventData, saveEvaluation } = require('./services/dbService');
-
 const cors = require('cors');
+const ioredis = require('ioredis');
+
+const { processEvent } = require('./functions/proccessEvent');
 
 // Configure CORS
 const corsOptions = {
@@ -32,14 +31,14 @@ const redis = new ioredis(redisUrl, {
   maxRetriesPerRequest: null, // Disable retry limit
 });
 
-const subscriber = new ioredis(redisUrl, {
+const publisher = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
     tls: { rejectUnauthorized: false },
   }),
   maxRetriesPerRequest: null,
 });
 
-const publisher = new ioredis(redisUrl, {
+const subscriber = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
     tls: { rejectUnauthorized: false },
   }),
@@ -57,31 +56,10 @@ subscriber.subscribe('event-evaluation-queue', async (err, count) => {
 
 // Listen for messages in the Redis queue
 subscriber.on('message', async (channel, message) => {
-  const taskData = JSON.parse(message);
-  const { eventId } = taskData;
+  console.log(`Received message from ${channel}: ${message}`);
 
-  console.log('Received task for processing:', { eventId });
-
-  try {
-    // Assuming the event ID is used to fetch event data from a database (or any other source)
-    const eventData = await getEventData(eventId); // Replace with your actual data fetching logic
-
-    if (!eventData) {
-      console.error('Event not found', { eventId });
-      return;
-    }
-
-    console.log('Retrieved event data:', { eventData });
-
-    // Call the evaluation function
-    const evaluation = await generateEvaluation(eventData);
-
-    console.log('Evaluation result:', { evaluation });
-
-    // You can save the evaluation result back to your database or process it further here
-    await saveEvaluation(eventId, evaluation); // Replace with actual DB saving logic
-  } catch (error) {
-    console.error('Error processing task', { eventId, error: error.message });
+  if (channel === 'event-evaluation-queue') {
+    await processEvent(message);
   }
 });
 

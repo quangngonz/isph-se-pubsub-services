@@ -1,4 +1,4 @@
-const { database } = require('../services/firebaseService');
+const { database } = require('./firebaseService');
 const { ref, get } = require('firebase/database');
 
 const OpenAI = require('openai');
