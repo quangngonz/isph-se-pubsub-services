@@ -16,9 +16,9 @@ const engine = async function () {
   for (const eventId in events) {
     const event = events[eventId];
     console.log('Event:', event.event_id);
-    console.log("\t", event.event_name);
-    console.log("\t", event.event_description);
-    console.log("\t", event.evaluation.system == "" ? "No evaluation" : event.evaluation.system);
+    console.log("\t", event['event_name']);
+    console.log("\t", event['event_description']);
+    console.log("\t", event.evaluation.system || "No evaluation");
   }
 
   console.log('____________________');
