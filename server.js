@@ -2,11 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const ioredis = require('ioredis');
 
-const { processEvent } = require('./functions/proccessEvent');
+const {processEvent} = require('./functions/proccessEvent');
 
 const engine = require('./engine');
-setInterval(() => {
-  engine.engine();
+setInterval(async () => {
+  await engine.engine();
 }, 1000);
 
 // Configure CORS
@@ -31,21 +31,21 @@ console.log('Redis URL:', redisUrl);
 // Set up Redis connection
 const redis = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
-    tls: { rejectUnauthorized: false },
+    tls: {rejectUnauthorized: false},
   }),
   maxRetriesPerRequest: null, // Disable retry limit
 });
 
 const publisher = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
-    tls: { rejectUnauthorized: false },
+    tls: {rejectUnauthorized: false},
   }),
   maxRetriesPerRequest: null,
 });
 
 const subscriber = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
-    tls: { rejectUnauthorized: false },
+    tls: {rejectUnauthorized: false},
   }),
   maxRetriesPerRequest: null,
 });
@@ -87,14 +87,14 @@ app.get('/', (req, res) => {
 });
 
 app.post('/trigger-task', async (req, res) => {
-  const { eventId } = req.body; // Extract from JSON payload
+  const {eventId} = req.body; // Extract from JSON payload
 
   if (!eventId) {
     return res.status(400).send('Missing eventId query parameter');
   }
 
   try {
-    const message = { eventId };
+    const message = {eventId};
     await publisher.publish('event-evaluation-queue', JSON.stringify(message));
     res.status(200).send('Task triggered');
   } catch (error) {
