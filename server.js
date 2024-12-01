@@ -5,9 +5,19 @@ const ioredis = require('ioredis');
 const {processEvent} = require('./functions/proccessEvent');
 
 const engine = require('./engine');
-setInterval(async () => {
+
+const generateRandomInterval = () => {
+  return Math.floor(Math.random() * (120000 - 5000 + 1)) + 5000;
+}
+
+const runEngine = async () => {
   await engine.engine();
-}, 1000);
+  const next_interval = generateRandomInterval();
+  console.log(`Next run in ${next_interval / 1000} seconds`);
+  setTimeout(runEngine, next_interval);
+}
+
+runEngine();
 
 // Configure CORS
 const corsOptions = {
