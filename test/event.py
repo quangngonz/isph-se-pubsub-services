@@ -3,31 +3,15 @@ import requests
 # Define the API endpoint
 # url = "http://localhost:3000/trigger-task"  # Local
 # url = "https://isph-sse.vercel.app/teacher/add-event"  # Vercel
-url = "https://isph-se-pubsub-services-e18f2fd3b798.herokuapp.com/trigger-task" # Heroku
+url = "https://isph-se-pubsub-services-e18f2fd3b798.herokuapp.com/trigger-task"  # Heroku
 
 # Test cases
-test_cases = [
-    {
-        "description": "Valid request",
-        "payload": {
-            "eventId": "c0b31539-858d-44a9-9142-42635ab70b3f"   
-        },
-        "expected_status": 200
-    },
-    {
-        "description": "Missing eventDetails",
-        "payload": {},
-        "expected_status": 400
-    },
-    {
-        "description": "Missing required fields",
-        "payload": {
-            "eventDetails": {
-                "event_name": "Science Fair"
-            }
-        },
-        "expected_status": 400
-    }
+event_ids = [
+    '7aa08ff7-82d9-4be2-afaf-85582a15fb3b',
+    'c0b31539-858d-44a9-9142-42635ab70b3f',
+    'd80bca12-8f32-4eb8-82c8-e7cdd54fe6cc',
+    'e706e547-d6f0-4541-ae5a-49c3d7b75cc5',
+    'fe80fb1e-ab40-441f-9941-063628deca65',
 ]
 
 # Run tests
@@ -38,6 +22,7 @@ test_cases = [
 #     print(f"Response: {response.text}")
 #     assert response.status_code == case['expected_status'], f"Test failed for {case['description']}"
 
-response = requests.post(url, json=test_cases[0]['payload'])
-print(f"Status Code: {response.status_code}")
-print(f"Response: {response.text}")
+for event_id in event_ids:
+    payload = {"eventId": event_id}
+    response = requests.post(url, json=payload)
+    print(f"Status Code: {response.status_code}")
