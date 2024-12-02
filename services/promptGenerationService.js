@@ -2,7 +2,7 @@
  * Generates a prompt for evaluation based on event and stock list.
  * @param {Object} event - The event data.
  * @param {Array} stockList - The list of stocks.
- * @returns {string} - The generated prompt.
+ * @returns {string} - The generated evaluation prompt.
  */
 function generateEvalPrompt(event, stockList) {
   return `
@@ -33,4 +33,23 @@ function generateEvalPrompt(event, stockList) {
     `;
 }
 
-module.exports = { generateEvalPrompt };
+/**
+ * @param event - The event data
+ * @param stockList - The list of stocks
+ * @returns {string} - The generated projection prompt
+ */
+function generateProjectionPrompt(event, stockList) {
+  return `
+  Project the effectiveness of the event ${event} based on the following stocks: ${stockList.join(', ')}.
+  
+  RETURN RESPONSE IN JSON FORMAT. 
+  RESULT Format:
+    {
+      stock_ticker: { 
+        time: [Amount of time the stock will go up, Amount of time the stock will go down], 
+        delay: [Amount of delay in the stock going up, Amount of delay in the stock going down]
+    }
+  `;
+}
+
+module.exports = {generateEvalPrompt, generateProjectionPrompt};

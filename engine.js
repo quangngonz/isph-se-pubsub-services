@@ -1,7 +1,7 @@
 const {database} = require('./services/firebaseService');
 const {ref, get} = require('firebase/database');
 
-// Loop that runs every 1000 milliseconds
+// Loop that runs engine
 const engine = async function () {
   // Log current time
   console.log('Current time:', new Date().toISOString());

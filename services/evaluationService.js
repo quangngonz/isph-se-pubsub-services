@@ -1,116 +1,16 @@
-const { database } = require('./firebaseService');
-const { ref, get } = require('firebase/database');
+const {database} = require('./firebaseService');
+const {ref, get} = require('firebase/database');
 
-const { generateEvalPrompt } = require('./promptGenerationService');
+const {generateEvalPrompt, generateProjectionPrompt} = require('./promptGenerationService');
+const {generateEvaluationOpenAI, generateEvaluationGemini} = require('./LLMServices');
 
-const OpenAI = require('openai');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
-const axios = require('axios');
-
-const dotenv = require('dotenv');
-dotenv.config();
-
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const USE_LLM = process.env.USE_LLM || 'openai';
-
-// Configure OpenAI API key
-const openai = new OpenAI({
-  apiKey: OPENAI_API_KEY, // Ensure your API key is set in the environment
-});
-
-// Initialize the Generative AI client
-const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-
-// Get the Generative Model
-const model = genAI.getGenerativeModel({
-  model: 'gemini-1.5-pro', // Adjust as per your API access
-});
-
-// Generation Configuration
-const generationConfig = {
-  temperature: 1,
-  topP: 0.95,
-  topK: 40,
-  maxOutputTokens: 8192,
-  responseMimeType: 'text/plain',
-};
-
-function generateProjectionPrompt(event, stockList) {
-  return `Project the effectiveness of the event ${event} based on the following stocks: ${stockList.join(
-    ', '
-  )}.`;
-}
-
-/**
- * Generate evaluation using OpenAI.
- * @param {Object} event - The event data.
- * @param {Array} stockList - The list of stocks.
- * @returns {Promise<string>} - The evaluation response or an error message.
- */
-async function generateEvaluationOpenAI(event, stockList) {
-  const prompt = generateEvalPrompt(event, stockList);
-
-  try {
-    const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini', // Specify the correct model
-      messages: [{ role: 'user', content: prompt }],
-    });
-
-    // Extract and return the response
-    return (
-      response.choices[0]?.message.content.trim() || 'No evaluation generated.'
-    );
-  } catch (error) {
-    console.error('Error generating evaluation with OpenAI:', error);
-    return 'Error in generating evaluation with OpenAI.';
-  }
-}
-
-/**
- * Generate evaluation using Gemini API.
- * @param {Object} event - The event data.
- * @param {Array} stockList - The list of stocks.
- * @returns {Promise<string>} - The evaluation response or an error message.
- */
-async function generateEvaluationGemini(event, stockList) {
-  const prompt = generateEvalPrompt(event, stockList);
-
-  try {
-    // Start a chat session
-    const chatSession = model.startChat({
-      generationConfig,
-      history: [],
-    });
-
-    // Send the prompt and get the result
-    const result = await chatSession.sendMessage(prompt);
-
-    // Extract and return the text response
-    // Extract between ```json and ```
-    const response = result.response.text().trim();
-    const start = response.indexOf('```json') + 7;
-    const end = response.indexOf('```', start);
-
-    console.log('____________________________________________________________');
-    console.log('Response:', response.substring(start, end).trim());
-
-    // convert to JSON
-    const json = JSON.parse(response.substring(start, end).trim());
-    console.log('JSON:', json);
-    console.log('____________________________________________________________');
-    return json || 'No evaluation generated.';
-  } catch (error) {
-    console.error('Error generating evaluation with Gemini:', error);
-    return 'Error in generating evaluation with Gemini.';
-  }
-}
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 /**
  * Select and use the appropriate LLM for evaluation.
  * @param {Object} event - The event data.
- * @param {Array} stockList - The list of stocks.
- * @returns {Promise<string>} - The evaluation response.
+ * @returns {Promise<String>} - The evaluation response.
  */
 async function generateEvaluation(event) {
   // Get stock list from /stocks endpoint
@@ -122,18 +22,27 @@ async function generateEvaluation(event) {
   }
 
   const stockList = Object.keys(snapshot.val());
-  var stock_list = [];
-  for (var i = 0; i < stockList.length; i++) {
-    stock_list.push(stockList[i].toUpperCase());
+  let stock_list = [];
+  for (let i = 0; i < stockList.length; i++) {
+    let ticker = stockList[i];
+    let name = snapshot.val()[ticker]['full_name'];
+    stock_list.push(`${ticker} : ${name}`);
   }
 
+  const prompt = generateEvalPrompt(event, stock_list);
+
   if (USE_LLM.toLowerCase() === 'openai' && OPENAI_API_KEY) {
-    return await generateEvaluationOpenAI(event, stock_list);
+    return await generateEvaluationOpenAI(prompt);
   } else {
-    return await generateEvaluationGemini(event, stock_list);
+    return await generateEvaluationGemini(prompt);
   }
 }
 
+/**
+ * Project the effectiveness of the event based on the stock list.
+ * @param {Object} event - The event data.
+ * @returns {Promise<String>} - The projection result.
+ */
 async function projectEffectiveness(event) {
   // Get stock list from /stocks endpoint
   const stocksRef = ref(database, 'stocks');
@@ -141,8 +50,11 @@ async function projectEffectiveness(event) {
 
   // TODO: Implement the projection logic
   const prompt = generateProjectionPrompt(event, Object.keys(stock.val()));
+  console.log(`Prompt: ${prompt}`)
 
-  console.log('Evaluation result:', { evaluation });
+  const evaluation = {"system": "No evaluation"};
+
+  console.log('Evaluation result:', {evaluation});
 }
 
-module.exports = { generateEvaluation, projectEffectiveness };
+module.exports = {generateEvaluation, projectEffectiveness};

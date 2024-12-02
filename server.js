@@ -38,14 +38,6 @@ const redisUrl =
 
 console.log('Redis URL:', redisUrl);
 
-// Set up Redis connection
-const redis = new ioredis(redisUrl, {
-  ...(process.env.NODE_ENV === 'production' && {
-    tls: {rejectUnauthorized: false},
-  }),
-  maxRetriesPerRequest: null, // Disable retry limit
-});
-
 const publisher = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
     tls: {rejectUnauthorized: false},
