@@ -106,5 +106,6 @@ app.post('/trigger-task', async (req, res) => {
 
 // Start Express server
 app.listen(port, () => {
+  console.log('ISPH SE Server');
   console.log(`Server is running on port ${port}`);
 });
