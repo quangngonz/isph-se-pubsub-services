@@ -1,3 +1,5 @@
+import time
+
 import requests
 
 # Define the API endpoint
@@ -14,15 +16,8 @@ event_ids = [
     'fe80fb1e-ab40-441f-9941-063628deca65',
 ]
 
-# Run tests
-# for case in test_cases:
-#     print(f"Running test: {case['description']}")
-#     response = requests.post(url, json=case['payload'])
-#     print(f"Status Code: {response.status_code}")
-#     print(f"Response: {response.text}")
-#     assert response.status_code == case['expected_status'], f"Test failed for {case['description']}"
-
 for event_id in event_ids:
     payload = {"eventId": event_id}
     response = requests.post(url, json=payload)
     print(f"Status Code: {response.status_code}")
+    time.sleep(1)
