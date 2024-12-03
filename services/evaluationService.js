@@ -41,7 +41,7 @@ async function generateEvaluation(event) {
 /**
  * Project the effectiveness of the event based on the stock list.
  * @param {Object} event - The event data.
- * @returns {Promise<String>} - The projection result.
+ * @returns {Promise<{system: string}>} - The projection result.
  */
 async function projectEffectiveness(event) {
   // Get stock list from /stocks endpoint
@@ -59,9 +59,10 @@ async function projectEffectiveness(event) {
   const prompt = generateProjectionPrompt(event, stock_list);
   console.log(`Prompt: ${prompt}`)
 
-  const evaluation = {"system": "No evaluation"};
+  const projection = {"system": "No evaluation __ not implemented"};
 
-  console.log('Evaluation result:', {evaluation});
+  console.log('Evaluation result:', {projection});
+  return projection;
 }
 
 module.exports = {generateEvaluation, projectEffectiveness};

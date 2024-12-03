@@ -16,12 +16,15 @@ const engine = async function () {
   for (const eventId in events) {
     const event = events[eventId];
     console.log('Event:', event.event_id);
-    console.log("\t", event['event_name']);
-    console.log("\t", event['event_description']);
-    console.log("\t", event.evaluation.system || "No evaluation");
+    console.log('\t', event['event_name']);
+    console.log('\t', event['event_description']);
+    console.log('\t', event.evaluation.system || 'No evaluation');
   }
 
   console.log('____________________');
+
+  // TODO: Added Decay function
+  // TODO: Add probability function for event to occur
 };
 
 exports.engine = engine;

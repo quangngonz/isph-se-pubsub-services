@@ -73,9 +73,13 @@ async function generateEvaluationGemini(prompt) {
     const response = result.response.text().trim();
     const start = response.indexOf('```json') + 7;
     const end = response.indexOf('```', start);
+    const explanation = response.substring(end, response.length).trim();
+
+    // Extract the rest of the response
 
     console.log('____________________________________________________________');
     console.log('Response:', response.substring(start, end).trim());
+    console.log('Explanation:', explanation);
 
     // convert to JSON
     const json = JSON.parse(response.substring(start, end).trim());

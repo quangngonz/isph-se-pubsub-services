@@ -1,5 +1,5 @@
 const {generateEvaluation, projectEffectiveness} = require('../services/evaluationService');
-const {getEventData, saveEvaluation, saveProjection} = require('../services/dbService');
+const {getEventData, saveEvaluation, saveProjection, updateEventStatus} = require('../services/dbService');
 
 /**
  * Process an event task.
@@ -32,6 +32,7 @@ const processEvent = async (message) => {
     // You can save the evaluation result back to your database or process it further here
     await saveEvaluation(eventId, evaluation);
     await saveProjection(eventId, projection);
+    await updateEventStatus(eventId, true);
   } catch (error) {
     console.error('Error processing task', {eventId, error: error.message});
   }
