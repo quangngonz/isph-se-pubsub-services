@@ -17,7 +17,7 @@ const runEngine = async () => {
   setTimeout(runEngine, next_interval);
 }
 
-runEngine();
+runEngine().then(r => console.log('Engine started'));
 
 // Configure CORS
 const corsOptions = {

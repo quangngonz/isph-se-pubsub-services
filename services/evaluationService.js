@@ -46,10 +46,17 @@ async function generateEvaluation(event) {
 async function projectEffectiveness(event) {
   // Get stock list from /stocks endpoint
   const stocksRef = ref(database, 'stocks');
-  const stock = await get(stocksRef);
+  const stocks = await get(stocksRef);
+  const stockList = Object.keys(stocks.val());
+  let stock_list = [];
+  for (let i = 0; i < stockList.length; i++) {
+    let ticker = stockList[i];
+    let name = stocks.val()[ticker]['full_name'];
+    stock_list.push(`${ticker} : ${name}`);
+  }
 
   // TODO: Implement the projection logic
-  const prompt = generateProjectionPrompt(event, Object.keys(stock.val()));
+  const prompt = generateProjectionPrompt(event, stock_list);
   console.log(`Prompt: ${prompt}`)
 
   const evaluation = {"system": "No evaluation"};
