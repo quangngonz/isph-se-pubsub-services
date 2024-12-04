@@ -71,6 +71,15 @@ subscriber.subscribe('event-projection-queue', (err, count) => {
   console.log(`Subscribed to ${count} channel(s)`);
 });
 
+subscriber.subscribe('create-new-user', (err, count) => {
+  if (err) {
+    console.error('Error subscribing to Redis channel', err);
+    return;
+  }
+  console.log(`Listening to 'create-new-user' channel`);
+  console.log(`Subscribed to ${count} channel(s)`);
+});
+
 // Listen for messages in the Redis queue
 subscriber.on('message', async (channel, message) => {
   console.log(`Received message from ${channel}: ${message}`);
@@ -81,6 +90,11 @@ subscriber.on('message', async (channel, message) => {
 
   if (channel === 'event-projection-queue') {
     console.log('Projection task received:', message);
+  }
+
+  if (channel === 'create-new-user') {
+    console.log('New user task received:', message);
+    console.log(`${message['timestamp']} Creating new user: ${message['userId']} in house: ${message['house']}`);
   }
 });
 
