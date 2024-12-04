@@ -2,21 +2,21 @@ const express = require('express');
 const cors = require('cors');
 const ioredis = require('ioredis');
 
-const {processEvent} = require('./functions/proccessEvent');
-const {createNewUser} = require('./functions/createNewUser');
+const { processEvent } = require('./functions/proccessEvent');
+const { createNewUser } = require('./functions/createNewUser');
 
 const engine = require('./engine');
 
 const generateRandomInterval = () => {
   return Math.floor(Math.random() * (120000 - 5000 + 1)) + 5000;
-}
+};
 
 const runEngine = async () => {
   await engine.engine();
   const next_interval = generateRandomInterval();
   console.log(`Next run in ${next_interval / 1000} seconds`);
   setTimeout(runEngine, next_interval);
-}
+};
 
 runEngine().then(() => console.log('Engine started'));
 
@@ -41,14 +41,14 @@ console.log('Redis URL:', redisUrl);
 
 const publisher = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
-    tls: {rejectUnauthorized: false},
+    tls: { rejectUnauthorized: false },
   }),
   maxRetriesPerRequest: null,
 });
 
 const subscriber = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
-    tls: {rejectUnauthorized: false},
+    tls: { rejectUnauthorized: false },
   }),
   maxRetriesPerRequest: null,
 });
@@ -95,8 +95,14 @@ subscriber.on('message', async (channel, message) => {
 
   if (channel === 'create-new-user') {
     console.log('New user task received:', message);
-    await createNewUser(message['userId'], message['house'], message['username'] || NaN);
-    console.log(`${message['timestamp']} Creating new user: ${message['userId']} in house: ${message['house']}`);
+    await createNewUser(
+      message['userId'],
+      message['house'],
+      message['username'] || NaN
+    );
+    console.log(
+      `${message['timestamp']} Creating new user: ${message['userId']} in house: ${message['house']}`
+    );
   }
 });
 
@@ -105,14 +111,14 @@ app.get('/', (req, res) => {
 });
 
 app.post('/trigger-task', async (req, res) => {
-  const {eventId} = req.body; // Extract from JSON payload
+  const { eventId } = req.body; // Extract from JSON payload
 
   if (!eventId) {
     return res.status(400).send('Missing eventId query parameter');
   }
 
   try {
-    const message = {eventId};
+    const message = { eventId };
     await publisher.publish('event-evaluation-queue', JSON.stringify(message));
     res.status(200).send('Task triggered');
   } catch (error) {
@@ -121,20 +127,25 @@ app.post('/trigger-task', async (req, res) => {
 });
 
 app.post('/create-new-user', async (req, res) => {
-  const {userId, house, username} = req.body; // Extract from JSON payload
+  const { userId, house, username, email } = req.body; // Extract from JSON payload
 
   if (!userId || !house) {
     return res.status(400).send('Missing userId or house query parameter');
   }
 
   try {
-    const message = {userId, house, username};
+    const message = {
+      userId: userId,
+      house: house,
+      username: username,
+      email: email,
+    };
     await publisher.publish('create-new-user', JSON.stringify(message));
     res.status(200).send('Task triggered');
   } catch (error) {
     res.status(500).send(`Error triggering task: ${error.message}`);
   }
-})
+});
 
 // Start Express server
 app.listen(port, () => {
