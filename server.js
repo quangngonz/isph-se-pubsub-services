@@ -2,8 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const ioredis = require('ioredis');
 
-const { processEvent } = require('./functions/proccessEvent');
-const { createNewUser } = require('./functions/createNewUser');
+const {processEvent} = require('./functions/proccessEvent');
 
 const engine = require('./engine');
 
@@ -41,14 +40,14 @@ console.log('Redis URL:', redisUrl);
 
 const publisher = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
-    tls: { rejectUnauthorized: false },
+    tls: {rejectUnauthorized: false},
   }),
   maxRetriesPerRequest: null,
 });
 
 const subscriber = new ioredis(redisUrl, {
   ...(process.env.NODE_ENV === 'production' && {
-    tls: { rejectUnauthorized: false },
+    tls: {rejectUnauthorized: false},
   }),
   maxRetriesPerRequest: null,
 });
@@ -72,15 +71,6 @@ subscriber.subscribe('event-projection-queue', (err, count) => {
   console.log(`Subscribed to ${count} channel(s)`);
 });
 
-subscriber.subscribe('create-new-user', (err, count) => {
-  if (err) {
-    console.error('Error subscribing to Redis channel', err);
-    return;
-  }
-  console.log(`Listening to 'create-new-user' channel`);
-  console.log(`Subscribed to ${count} channel(s)`);
-});
-
 // Listen for messages in the Redis queue
 subscriber.on('message', async (channel, message) => {
   console.log(`Received message from ${channel}: ${message}`);
@@ -92,18 +82,6 @@ subscriber.on('message', async (channel, message) => {
   if (channel === 'event-projection-queue') {
     console.log('Projection task received:', message);
   }
-
-  if (channel === 'create-new-user') {
-    console.log('New user task received:', message);
-    await createNewUser(
-      message['userId'],
-      message['house'],
-      message['username'] || NaN
-    );
-    console.log(
-      `${message['timestamp']} Creating new user: ${message['userId']} in house: ${message['house']}`
-    );
-  }
 });
 
 app.get('/', (req, res) => {
@@ -111,36 +89,15 @@ app.get('/', (req, res) => {
 });
 
 app.post('/trigger-task', async (req, res) => {
-  const { eventId } = req.body; // Extract from JSON payload
+  const {eventId} = req.body; // Extract from JSON payload
 
   if (!eventId) {
     return res.status(400).send('Missing eventId query parameter');
   }
 
   try {
-    const message = { eventId };
+    const message = {eventId};
     await publisher.publish('event-evaluation-queue', JSON.stringify(message));
-    res.status(200).send('Task triggered');
-  } catch (error) {
-    res.status(500).send(`Error triggering task: ${error.message}`);
-  }
-});
-
-app.post('/create-new-user', async (req, res) => {
-  const { userId, house, username, email } = req.body; // Extract from JSON payload
-
-  if (!userId || !house) {
-    return res.status(400).send('Missing userId or house query parameter');
-  }
-
-  try {
-    const message = {
-      userId: userId,
-      house: house,
-      username: username,
-      email: email,
-    };
-    await publisher.publish('create-new-user', JSON.stringify(message));
     res.status(200).send('Task triggered');
   } catch (error) {
     res.status(500).send(`Error triggering task: ${error.message}`);
