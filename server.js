@@ -3,6 +3,7 @@ const cors = require('cors');
 const ioredis = require('ioredis');
 
 const {processEvent} = require('./functions/proccessEvent');
+const {createNewUser} = require('./functions/createNewUser');
 
 const engine = require('./engine');
 
@@ -94,6 +95,7 @@ subscriber.on('message', async (channel, message) => {
 
   if (channel === 'create-new-user') {
     console.log('New user task received:', message);
+    await createNewUser(message['userId'], message['house'], message['username'] || NaN);
     console.log(`${message['timestamp']} Creating new user: ${message['userId']} in house: ${message['house']}`);
   }
 });
@@ -117,6 +119,22 @@ app.post('/trigger-task', async (req, res) => {
     res.status(500).send(`Error triggering task: ${error.message}`);
   }
 });
+
+app.post('/create-new-user', async (req, res) => {
+  const {userId, house, username} = req.body; // Extract from JSON payload
+
+  if (!userId || !house) {
+    return res.status(400).send('Missing userId or house query parameter');
+  }
+
+  try {
+    const message = {userId, house, username};
+    await publisher.publish('create-new-user', JSON.stringify(message));
+    res.status(200).send('Task triggered');
+  } catch (error) {
+    res.status(500).send(`Error triggering task: ${error.message}`);
+  }
+})
 
 // Start Express server
 app.listen(port, () => {
