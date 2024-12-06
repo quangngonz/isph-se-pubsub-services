@@ -46,9 +46,19 @@ function generateProjectionPrompt(event, stockList) {
   RESULT Format:
     {
       stock_ticker: { 
-        time: [Amount of time the stock will go up, Amount of time the stock will go down], 
-        delay: [Amount of delay in the stock going up, Amount of delay in the stock going down]
+        time: [Amount of time the stock will go up, decimal for portion day, whole number for full day from 0-5 days], 
+        delay: [Amount of delay in the stock going up from 1-3 days]
+        probability: [Probability of the stock going as predicted, decimal from 0.7-1]
     }
+    
+   Example:
+   {
+    RUA_BIEN: {
+      time: 1.76 // 1.76 days,
+      delay: 0.5, // 0.5 days delay
+      probability: 0.7 // 70% probability
+    }
+   }
   `;
 }
 

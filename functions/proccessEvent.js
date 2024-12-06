@@ -28,6 +28,7 @@ const processEvent = async (message) => {
     const projection = await projectEffectiveness(eventData);
 
     console.log('Evaluation result:', {evaluation});
+    console.log('Projection result:', {projection});
 
     // You can save the evaluation result back to your database or process it further here
     await saveEvaluation(eventId, evaluation);

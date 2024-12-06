@@ -15,8 +15,8 @@ event_ids = [
     'fe80fb1e-ab40-441f-9941-063628deca65',
 ]
 
-for event_id in event_ids[:1]:
+for event_id in event_ids:
     payload = {"eventId": event_id}
     response = requests.post(url, json=payload)
     print(f"Status Code: {response.status_code}")
-    time.sleep(1)
+    time.sleep(20)

@@ -59,9 +59,14 @@ async function projectEffectiveness(event) {
   const prompt = generateProjectionPrompt(event, stock_list);
   console.log(`Prompt: ${prompt}`)
 
-  const projection = {"system": "No evaluation __ not implemented"};
+  let projection;
 
-  console.log('Evaluation result:', {projection});
+  if (USE_LLM.toLowerCase() === 'openai' && OPENAI_API_KEY) {
+    projection = await generateEvaluationOpenAI(prompt);
+  } else {
+    projection = await generateEvaluationGemini(prompt);
+  }
+
   return projection;
 }
 
