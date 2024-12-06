@@ -6,9 +6,9 @@
  */
 function generateEvalPrompt(event, stockList) {
   return `
-      Event Name: ${event.event_name}
-      Description: ${event.event_description}
-      Timestamp: ${event.timestamp}
+      Event Name: ${event['event_name']}
+      Description: ${event['event_description']}
+      Timestamp: ${event['timestamp']}
   
       Here is what the teacher suggested:
       ${event.evaluation?.teacher || 'No teacher evaluation provided.'}
@@ -34,6 +34,7 @@ function generateEvalPrompt(event, stockList) {
 }
 
 /**
+ * Generates a prompt for projection based on event and stock list.
  * @param event - The event data
  * @param stockList - The list of stocks
  * @returns {string} - The generated projection prompt
