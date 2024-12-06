@@ -2,17 +2,17 @@ const {database} = require('./services/firebaseService');
 const {ref, get} = require('firebase/database');
 
 // Loop that runs engine
-const engine = async function () {
-  // Log current time
+const engine = async function (time_passed) {
+  console.log('____________________');
   console.log('Current time:', new Date().toISOString());
   console.log('I am an engine running the ISPH Stock Exchange');
+  console.log('Time passed since last cycle:', time_passed, 'ms');
 
   const eventWeightsRef = ref(database, `engine_weights`);
   const eventWeightsSnapshot = await get(eventWeightsRef);
 
   const events = eventWeightsSnapshot.val();
 
-// Build a table with formatted JSON
   const Table = require('cli-table3');
   const table = new Table({
     head: ['Event ID', 'Evaluation', 'Projection'],

@@ -10,14 +10,22 @@ const generateRandomInterval = () => {
   return Math.floor(Math.random() * (120000 - 5000 + 1)) + 5000;
 };
 
-const runEngine = async () => {
-  await engine.engine();
-  const next_interval = generateRandomInterval();
-  console.log(`Next run in ${next_interval / 1000} seconds`);
-  setTimeout(runEngine, next_interval);
+const runEngine = async (time_passed) => {
+  try {
+    await engine.engine(time_passed);
+    const next_interval = generateRandomInterval();
+    console.log(`Next run in ${next_interval / 1000} seconds`);
+    setTimeout(async () => {
+      await runEngine(next_interval);
+    }, next_interval);
+  } catch (error) {
+    console.error("Error in runEngine:", error);
+    // Optionally, retry after a fixed delay
+    setTimeout(() => runEngine(time_passed), 5000);
+  }
 };
 
-runEngine().then(() => console.log('Engine started'));
+runEngine(generateRandomInterval()).then(() => console.log('Engine started'));
 
 // Configure CORS
 const corsOptions = {
