@@ -1,5 +1,5 @@
-const {database} = require('./services/firebaseService');
-const {ref, get} = require('firebase/database');
+const {getEventWeights, getStocks} = require("./functions/server_data_fetcher");
+const Table = require("cli-table3");
 
 // Loop that runs engine
 const engine = async function (time_passed) {
@@ -8,32 +8,35 @@ const engine = async function (time_passed) {
   console.log('I am an engine running the ISPH Stock Exchange');
   console.log('Time passed since last cycle:', time_passed, 'ms');
 
-  const eventWeightsRef = ref(database, `engine_weights`);
-  const eventWeightsSnapshot = await get(eventWeightsRef);
+  const eventWeights = await getEventWeights(true);
+  const stocks = await getStocks(true);
+  decayStocks(stocks, {tableName: "Stocks after decay"});
 
-  const events = eventWeightsSnapshot.val();
+  console.log('____________________');
+};
 
-  const Table = require('cli-table3');
+const decayStocks = (stocks, {decayRate = 0.002, tableName = ""} = {}) => {
+  const decayStockPrice = (stockPrice, decayRate) => {
+    return Math.round(stockPrice * (1 - decayRate) * 100) / 100;
+  };
+  
+  if (tableName) {
+    console.log(tableName + ":");
+  }
+
   const table = new Table({
-    head: ['Event ID', 'Evaluation', 'Projection'],
+    head: Object.keys(stocks[Object.keys(stocks)[0]]),
     wordWrap: true,
   });
 
-// Populate the table with formatted data
-  for (const eventKey in events) {
-    table.push([
-      events[eventKey]['event_id'],
-      JSON.stringify(events[eventKey]['evaluation'], null, 2), // Pretty JSON
-      JSON.stringify(events[eventKey]['projection'], null, 2), // Pretty JSON
-    ]);
+  for (const stockKey in stocks) {
+    const stock = stocks[stockKey];
+    stock['current_price'] = decayStockPrice(stock['current_price'], decayRate);
+    table.push(Object.values(stock));
   }
 
-// Print the table to the terminal
   console.log(table.toString());
+}
 
-  console.log('____________________');
-
-  // TODO: Added Decay function
-};
 
 exports.engine = engine;
