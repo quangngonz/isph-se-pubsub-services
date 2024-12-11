@@ -55,7 +55,6 @@ async function projectEffectiveness(event) {
     stock_list.push(`${ticker} : ${name}`);
   }
 
-  // TODO: Implement the projection logic
   const prompt = generateProjectionPrompt(event, stock_list);
   console.log(`Prompt: ${prompt}`)
 
@@ -65,6 +64,11 @@ async function projectEffectiveness(event) {
     projection = await generateEvaluationOpenAI(prompt);
   } else {
     projection = await generateEvaluationGemini(prompt);
+
+    for (const stock in projection) {
+      projection[stock]['time'] = Math.round(projection[stock]['time'] * 24 * 60 * 60 * 1000);
+      projection[stock]['delay'] = Math.round(projection[stock]['delay'] * 24 * 60 * 60 * 1000);
+    }
   }
 
   return projection;

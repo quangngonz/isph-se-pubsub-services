@@ -19,4 +19,4 @@ for event_id in event_ids:
     payload = {"eventId": event_id}
     response = requests.post(url, json=payload)
     print(f"Status Code: {response.status_code}")
-    time.sleep(20)
+    time.sleep(60)

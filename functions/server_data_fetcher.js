@@ -8,6 +8,12 @@ const getEventWeights = async (log = false) => {
 
   const events = eventWeightsSnapshot.val();
 
+  // for (const eventKey in events) {
+  //   for (const stockId in events[eventKey]['projection']) {
+  //     events[eventKey]['projection'][stockId]['time'] = Math.round(events[eventKey]['projection'][stockId]['time'] * 24 * 60 * 60 * 1000);
+  //   }
+  // }
+
   if (log) {
     const table = new Table({
       head: ['Event ID', 'Evaluation', 'Projection'],

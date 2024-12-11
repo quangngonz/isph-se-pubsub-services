@@ -25,7 +25,9 @@ const processEvent = async (message) => {
 
     // Call the evaluation function
     const evaluation = await generateEvaluation(eventData);
+    await new Promise(resolve => setTimeout(resolve, 10000));
     const projection = await projectEffectiveness(eventData);
+    await new Promise(resolve => setTimeout(resolve, 60000));
 
     console.log('Evaluation result:', {evaluation});
     console.log('Projection result:', {projection});

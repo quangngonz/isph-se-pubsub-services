@@ -1,5 +1,5 @@
 const {getEventWeights, getStocks} = require("./functions/server_data_fetcher");
-const Table = require("cli-table3");
+const {decayStocks, sumWeights} = require("./functions/manipulateStockPrices");
 
 // Loop that runs engine
 const engine = async function (time_passed) {
@@ -11,34 +11,10 @@ const engine = async function (time_passed) {
   const eventWeights = await getEventWeights(true);
   const stocks = await getStocks(true);
   decayStocks(stocks, {tableName: "Stocks after decay", log: true});
+  await sumWeights(eventWeights, time_passed);
 
   console.log('____________________');
 };
-
-const decayStocks = (stocks, {decayRate = 0.002, tableName = "", log = false} = {}) => {
-  const decayStockPrice = (stockPrice, decayRate) => {
-    return Math.round(stockPrice * (1 - decayRate) * 100) / 100;
-  };
-
-  if (tableName) {
-    console.log(`\n${tableName}:`);
-  }
-
-  if (log) {
-    const table = new Table({
-      head: Object.keys(stocks[Object.keys(stocks)[0]]),
-      wordWrap: true,
-    });
-
-    for (const stockKey in stocks) {
-      const stock = stocks[stockKey];
-      stock['current_price'] = decayStockPrice(stock['current_price'], decayRate);
-      table.push(Object.values(stock));
-    }
-
-    console.log(table.toString());
-  }
-}
 
 
 exports.engine = engine;
