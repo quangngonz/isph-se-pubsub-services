@@ -39,10 +39,7 @@ app.use(express.json());
 app.use(cors(corsOptions));
 const port = process.env.PORT || 3000;
 
-const redisUrl =
-  process.env.NODE_ENV === 'production'
-    ? process.env.REDIS_TLS_URL
-    : process.env.REDIS_URL;
+const redisUrl = process.env.REDIS_URL
 
 console.log('Redis URL:', redisUrl);
 
