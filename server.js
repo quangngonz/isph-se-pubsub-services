@@ -6,8 +6,9 @@ const {processEvent} = require('./functions/proccessEvent');
 
 const engine = require('./engine');
 
+// Generate a random interval between 5 and 300 seconds
 const generateRandomInterval = () => {
-  return Math.floor(Math.random() * (120000 - 5000 + 1)) + 5000;
+  return Math.floor(Math.random() * (300000 - 5000 + 1)) + 5000;
 };
 
 const runEngine = async (time_passed) => {

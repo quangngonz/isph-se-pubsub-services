@@ -11,10 +11,9 @@ const engine = async function (time_passed) {
   const eventWeights = await getEventWeights(true);
   const stocks = await getStocks(true);
   decayStocks(stocks, {tableName: "Stocks after decay", log: true});
-  await sumWeights(eventWeights, time_passed);
+  const resultant_stock = await sumWeights(eventWeights, time_passed);
 
   console.log('____________________');
 };
-
 
 exports.engine = engine;

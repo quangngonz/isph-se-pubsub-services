@@ -36,19 +36,20 @@ const sumWeights = async (eventWeights, time_passed) => {
   let stockKeys = Object.keys(stocks);
   let resultant_effect = {};
   for (const key in stockKeys) {
-    resultant_effect[stockKeys[key]] = 0;
+    resultant_effect[stockKeys[key]] = [];
   }
+
   const eventAffecting = await getAffectingEvents(eventWeights, time_passed);
 
   for (const event in eventAffecting) {
     let evals = eventWeights[event]['evaluation'];
     for (const stock in evals) {
-      resultant_effect[stock] += Number(evals[stock]);
+      resultant_effect[stock].push(evals[stock]);
     }
   }
 
   console.log(`Resultant Effect: ${JSON.stringify(resultant_effect)}`);
-
+  return resultant_effect;
 }
 
 module.exports = {decayStocks, sumWeights};
