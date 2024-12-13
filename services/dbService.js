@@ -1,5 +1,6 @@
 const {database} = require('../services/firebaseService');
 const {ref, get, set} = require('firebase/database');
+const {v4: uuidv4} = require('uuid');
 
 async function getEventData(eventId) {
   const eventRef = ref(database, `events/${eventId}`);
@@ -71,4 +72,29 @@ async function updateEventStatus(eventId, status) {
   console.log('____________________');
 }
 
-module.exports = {getEventData, saveEvaluation, saveProjection, updateEventStatus};
+const logOldPrice = async (stock) => {
+  const oldStockPrice = await get(ref(database, `stocks/${stock}/current_price`));
+
+  const stockPriceLog = {
+    timestamp: new Date(Date.now()).toISOString(),
+    price: oldStockPrice.val(),
+    stock_ticker: stock,
+    volumeTraded: Math.floor(Math.random() * 1000000),
+  }
+
+  const record_name = uuidv4();
+
+  const stockPriceLogRef = ref(database, `price_history/${record_name}`);
+  await set(stockPriceLogRef, stockPriceLog);
+}
+
+async function saveStocksPrices(stocksPrices) {
+  for (const stock in stocksPrices) {
+    await logOldPrice(stock);
+
+    const stockRef = ref(database, `stocks/${stock}/current_price`);
+    await set(stockRef, stocksPrices[stock]);
+  }
+}
+
+module.exports = {getEventData, saveEvaluation, saveProjection, updateEventStatus, saveStocksPrices};
