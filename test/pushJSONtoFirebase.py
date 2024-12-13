@@ -50,7 +50,7 @@ SERVICE_ACCOUNT = {
 }
 
 push_json_to_firebase(
-    json_file_path='json_files/portfolio.json',
-    table_name='portfolios',
+    json_file_path='json_files/transactions.json',
+    table_name='transactions',
     service_account=SERVICE_ACCOUNT
 )

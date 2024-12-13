@@ -29,8 +29,8 @@ const engine = async function (time_passed) {
   decayStocks(stocks, {tableName: "Stocks after decay", log: true});
   const resultant_stock = await sumWeights(eventWeights, time_passed);
 
-  const updated_stocks = randomiseStockPrices(stocks, true);
-  await saveStocksPrices(updated_stocks);
+  // const updated_stocks = randomiseStockPrices(stocks, true);
+  // await saveStocksPrices(updated_stocks);
 
   console.log('____________________');
 };
