@@ -1,5 +1,6 @@
 const {getEventWeights, getStocks} = require("./functions/server_data_fetcher");
 const {decayStocks, sumWeights} = require("./functions/manipulateStockPrices");
+const {projectTransactions} = require("./functions/priceProjectionTransactions");
 const {saveStocksPrices} = require("./services/dbService");
 
 // Mock Function randomise stock prices
@@ -31,6 +32,9 @@ const engine = async function (time_passed) {
 
   // const updated_stocks = randomiseStockPrices(stocks, true);
   // await saveStocksPrices(updated_stocks);
+
+  const transactions = await projectTransactions();
+
 
   console.log('____________________');
 };

@@ -1,0 +1,1530 @@
+{
+    "f049f3a8-74fa-43f2-b9d4-63a663885a4e": {
+        "transaction_id": "f049f3a8-74fa-43f2-b9d4-63a663885a4e",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 57,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-27T22:42:18.059928"
+    },
+    "5765e261-0c75-4951-90af-0bdb7ecada9a": {
+        "transaction_id": "5765e261-0c75-4951-90af-0bdb7ecada9a",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 97,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-28T05:40:43.098577"
+    },
+    "55d7eacb-40f7-427c-a02e-e4e038fb2e55": {
+        "transaction_id": "55d7eacb-40f7-427c-a02e-e4e038fb2e55",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 21,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-02T14:28:36.539488"
+    },
+    "cb33d84d-46e4-46a0-b3a3-52df3a0e5ce1": {
+        "transaction_id": "cb33d84d-46e4-46a0-b3a3-52df3a0e5ce1",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 66,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-22T17:03:01.125793"
+    },
+    "96dab5e4-368d-423e-bc19-71c2e3b48565": {
+        "transaction_id": "96dab5e4-368d-423e-bc19-71c2e3b48565",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 7,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-19T16:25:27.575886"
+    },
+    "f9252d95-6ae6-4a50-815b-ae620afb2c6f": {
+        "transaction_id": "f9252d95-6ae6-4a50-815b-ae620afb2c6f",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 88,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-15T23:25:40.032279"
+    },
+    "64551349-4a9b-41ec-a4d6-b0f0dacda4a1": {
+        "transaction_id": "64551349-4a9b-41ec-a4d6-b0f0dacda4a1",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 83,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-09T10:19:08.369690"
+    },
+    "5139e89f-bd73-469a-bc86-0e381cddcec3": {
+        "transaction_id": "5139e89f-bd73-469a-bc86-0e381cddcec3",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 56,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-14T02:38:05.481765"
+    },
+    "8bc243be-1348-4da2-9ab1-cf0f81d4e7c4": {
+        "transaction_id": "8bc243be-1348-4da2-9ab1-cf0f81d4e7c4",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 24,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-22T22:48:54.146188"
+    },
+    "fd46f991-0331-43ba-b5d8-9ffebb2af85b": {
+        "transaction_id": "fd46f991-0331-43ba-b5d8-9ffebb2af85b",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 84,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-22T06:51:33.563607"
+    },
+    "795f0324-9108-4f08-85db-89e41c071458": {
+        "transaction_id": "795f0324-9108-4f08-85db-89e41c071458",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 97,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-30T12:06:05.832114"
+    },
+    "1f890de0-920f-4178-9ffd-7bb574c4eae9": {
+        "transaction_id": "1f890de0-920f-4178-9ffd-7bb574c4eae9",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 4,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-14T22:35:57.463960"
+    },
+    "8d1ee335-482c-4cab-8f58-6c846f09c295": {
+        "transaction_id": "8d1ee335-482c-4cab-8f58-6c846f09c295",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 71,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-20T01:33:07.018537"
+    },
+    "d0d32afb-6f28-44c4-96fb-dd3b2f2d13a9": {
+        "transaction_id": "d0d32afb-6f28-44c4-96fb-dd3b2f2d13a9",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 43,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-17T14:41:18.266016"
+    },
+    "f6b38d46-6282-44c4-89d8-99ced42b7627": {
+        "transaction_id": "f6b38d46-6282-44c4-89d8-99ced42b7627",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 52,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-25T15:25:45.828496"
+    },
+    "ace18101-414a-4aed-b846-9673c7d9128e": {
+        "transaction_id": "ace18101-414a-4aed-b846-9673c7d9128e",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 35,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-03T22:55:52.373568"
+    },
+    "5b68f497-54f7-4b6d-83b5-c144f2914e46": {
+        "transaction_id": "5b68f497-54f7-4b6d-83b5-c144f2914e46",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 54,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-10T06:30:54.474827"
+    },
+    "2559928e-3855-436b-8268-874c394b610b": {
+        "transaction_id": "2559928e-3855-436b-8268-874c394b610b",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 85,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-15T15:45:20.207874"
+    },
+    "69adadb0-94b3-4fc7-8bd3-1e3f269a445d": {
+        "transaction_id": "69adadb0-94b3-4fc7-8bd3-1e3f269a445d",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 2,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-07T10:28:04.736254"
+    },
+    "4d944a10-69af-40a7-b2b7-fcf16937b4f4": {
+        "transaction_id": "4d944a10-69af-40a7-b2b7-fcf16937b4f4",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 41,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-12T23:27:22.247393"
+    },
+    "61b91e7c-8fc1-4640-9dce-0ceacc3029f5": {
+        "transaction_id": "61b91e7c-8fc1-4640-9dce-0ceacc3029f5",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 69,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-15T13:36:37.391538"
+    },
+    "3296d465-5373-4ef0-87da-30f866a23251": {
+        "transaction_id": "3296d465-5373-4ef0-87da-30f866a23251",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 67,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-22T04:49:12.128952"
+    },
+    "9df89575-1bda-4bc4-ba87-cc71f90dc0d1": {
+        "transaction_id": "9df89575-1bda-4bc4-ba87-cc71f90dc0d1",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 18,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-02T04:23:31.050161"
+    },
+    "6a4d2372-f415-4c78-a9b0-6af236f7015f": {
+        "transaction_id": "6a4d2372-f415-4c78-a9b0-6af236f7015f",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 33,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-28T00:41:44.282826"
+    },
+    "2205f700-09d3-497a-846a-eb1ac25e7fd2": {
+        "transaction_id": "2205f700-09d3-497a-846a-eb1ac25e7fd2",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 68,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-04T18:47:31.646655"
+    },
+    "56c244d3-b9cb-4c3e-9579-c3f63d82ec21": {
+        "transaction_id": "56c244d3-b9cb-4c3e-9579-c3f63d82ec21",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 44,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-01T09:41:36.586278"
+    },
+    "055fe1b3-cf88-490f-aa7d-132df2c903d5": {
+        "transaction_id": "055fe1b3-cf88-490f-aa7d-132df2c903d5",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 2,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-24T06:19:50.896166"
+    },
+    "a9673bd2-c1cd-4588-955c-28a91b30194f": {
+        "transaction_id": "a9673bd2-c1cd-4588-955c-28a91b30194f",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 93,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-08T04:54:49.161383"
+    },
+    "9bfe5f6c-2e66-446a-a26b-91d7325701bb": {
+        "transaction_id": "9bfe5f6c-2e66-446a-a26b-91d7325701bb",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 35,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-25T23:06:21.978932"
+    },
+    "b67c6a67-2d70-4226-af13-5a496a3ea773": {
+        "transaction_id": "b67c6a67-2d70-4226-af13-5a496a3ea773",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 65,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-12T19:36:17.599353"
+    },
+    "acc65740-1acf-4858-b4e9-28e2ebe16edb": {
+        "transaction_id": "acc65740-1acf-4858-b4e9-28e2ebe16edb",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 41,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-27T13:08:27.871637"
+    },
+    "3108deb8-cf2c-4a26-a1b0-237e129ab881": {
+        "transaction_id": "3108deb8-cf2c-4a26-a1b0-237e129ab881",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 78,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-19T23:09:07.402328"
+    },
+    "8ad94123-7847-4bcd-a8cd-14f10e0f5f4c": {
+        "transaction_id": "8ad94123-7847-4bcd-a8cd-14f10e0f5f4c",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 67,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-14T15:06:11.358967"
+    },
+    "d5902e92-f232-4e4e-b9a0-6bdf804f1dfc": {
+        "transaction_id": "d5902e92-f232-4e4e-b9a0-6bdf804f1dfc",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 97,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-22T23:19:11.686481"
+    },
+    "fc8eef54-1ac5-4ad1-96d6-ae3fa3f90c36": {
+        "transaction_id": "fc8eef54-1ac5-4ad1-96d6-ae3fa3f90c36",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 85,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-14T20:17:17.269206"
+    },
+    "72feadc3-eacc-4c4d-bc30-c78c25d10343": {
+        "transaction_id": "72feadc3-eacc-4c4d-bc30-c78c25d10343",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 48,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-26T01:04:35.097361"
+    },
+    "ad282909-7deb-4462-b446-d89ebeb97c15": {
+        "transaction_id": "ad282909-7deb-4462-b446-d89ebeb97c15",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 81,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-06T13:37:51.568244"
+    },
+    "0eb611b6-eedd-467d-97ae-04a7f641b4aa": {
+        "transaction_id": "0eb611b6-eedd-467d-97ae-04a7f641b4aa",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 22,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-12T17:52:39.537241"
+    },
+    "e5f4d8be-697c-49f0-b3ec-4d1690d0c210": {
+        "transaction_id": "e5f4d8be-697c-49f0-b3ec-4d1690d0c210",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 21,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-12T06:08:20.138309"
+    },
+    "8a064a73-df34-4d2d-8bd8-9a9ea44fc9bb": {
+        "transaction_id": "8a064a73-df34-4d2d-8bd8-9a9ea44fc9bb",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 100,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-10T15:59:00.849862"
+    },
+    "8c796128-9196-441f-be3c-2bbf2fe3462e": {
+        "transaction_id": "8c796128-9196-441f-be3c-2bbf2fe3462e",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 74,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-21T01:25:01.019314"
+    },
+    "83200e58-3b46-451d-953a-7393619c839d": {
+        "transaction_id": "83200e58-3b46-451d-953a-7393619c839d",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 43,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-21T07:43:06.035527"
+    },
+    "23d43cf1-aae8-4d30-a249-6dc7a1ad58db": {
+        "transaction_id": "23d43cf1-aae8-4d30-a249-6dc7a1ad58db",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 23,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-26T05:37:15.492860"
+    },
+    "cddc6488-b464-4386-aa09-44dca32a8503": {
+        "transaction_id": "cddc6488-b464-4386-aa09-44dca32a8503",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 96,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-19T21:10:18.489894"
+    },
+    "18530846-1f20-45eb-90ea-a46ce95eca52": {
+        "transaction_id": "18530846-1f20-45eb-90ea-a46ce95eca52",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 47,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-23T12:48:27.758850"
+    },
+    "8cc004c3-69e1-4e36-8046-280f1196b31f": {
+        "transaction_id": "8cc004c3-69e1-4e36-8046-280f1196b31f",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 53,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-07T19:31:33.816438"
+    },
+    "a4ae0923-1f17-4c0f-a697-2df95e0acd0c": {
+        "transaction_id": "a4ae0923-1f17-4c0f-a697-2df95e0acd0c",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 65,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-02T21:05:46.460158"
+    },
+    "7ad736e8-343f-4ce7-aac3-a20fdca1346e": {
+        "transaction_id": "7ad736e8-343f-4ce7-aac3-a20fdca1346e",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 40,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-17T08:50:38.459724"
+    },
+    "cc9d4303-f96a-40e0-947b-8d956b198929": {
+        "transaction_id": "cc9d4303-f96a-40e0-947b-8d956b198929",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 13,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-16T19:18:31.132974"
+    },
+    "1abc57b0-6741-40e2-a103-f983f1b60f10": {
+        "transaction_id": "1abc57b0-6741-40e2-a103-f983f1b60f10",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 43,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-15T02:17:05.550723"
+    },
+    "70cdff36-bac8-4825-b7c2-01ea04cd6f84": {
+        "transaction_id": "70cdff36-bac8-4825-b7c2-01ea04cd6f84",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 4,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-20T11:16:29.852312"
+    },
+    "380e3298-d403-4cbb-b741-40d0366029df": {
+        "transaction_id": "380e3298-d403-4cbb-b741-40d0366029df",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 23,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-07T08:37:44.835462"
+    },
+    "ace231e8-a2fd-47f8-bd55-5baf4d59cad2": {
+        "transaction_id": "ace231e8-a2fd-47f8-bd55-5baf4d59cad2",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 2,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-02T02:54:12.310882"
+    },
+    "451cf522-ea15-4bab-878a-b8f20e153a60": {
+        "transaction_id": "451cf522-ea15-4bab-878a-b8f20e153a60",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 100,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-11T13:37:38.474634"
+    },
+    "0cd570be-f69d-4740-a2e8-46c066b64028": {
+        "transaction_id": "0cd570be-f69d-4740-a2e8-46c066b64028",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 48,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-30T07:34:31.660279"
+    },
+    "626ef2eb-2144-44b9-a14f-2c4446aeafd5": {
+        "transaction_id": "626ef2eb-2144-44b9-a14f-2c4446aeafd5",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 13,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-28T12:06:44.007856"
+    },
+    "83387bad-6c41-4ed5-99cc-955afeacde23": {
+        "transaction_id": "83387bad-6c41-4ed5-99cc-955afeacde23",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 38,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-30T08:43:37.404365"
+    },
+    "b8af3ad6-33be-49e0-86ed-2a73a1493216": {
+        "transaction_id": "b8af3ad6-33be-49e0-86ed-2a73a1493216",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 21,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-15T19:58:49.009045"
+    },
+    "e3e61630-3cd3-4c23-a538-257c3d9f89a8": {
+        "transaction_id": "e3e61630-3cd3-4c23-a538-257c3d9f89a8",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 63,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-27T05:22:42.043685"
+    },
+    "4f6e8b43-fd6f-40d7-b12f-ed72057227ec": {
+        "transaction_id": "4f6e8b43-fd6f-40d7-b12f-ed72057227ec",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 56,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-30T05:28:43.424891"
+    },
+    "86f06a6d-4052-4d54-93c7-15ef713314ee": {
+        "transaction_id": "86f06a6d-4052-4d54-93c7-15ef713314ee",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 27,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-14T02:14:32.962791"
+    },
+    "d1ff668b-1283-4007-8056-20ad34a6e7c5": {
+        "transaction_id": "d1ff668b-1283-4007-8056-20ad34a6e7c5",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 91,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-21T17:06:57.309778"
+    },
+    "9a5f4dbe-a820-43ee-8401-79d90efef670": {
+        "transaction_id": "9a5f4dbe-a820-43ee-8401-79d90efef670",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 58,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-12T03:05:32.301997"
+    },
+    "9f09b708-0a18-4a6d-89da-145ed162f660": {
+        "transaction_id": "9f09b708-0a18-4a6d-89da-145ed162f660",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 29,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-28T10:23:07.902918"
+    },
+    "3c0f5e2f-d550-4b35-981c-419689f6b780": {
+        "transaction_id": "3c0f5e2f-d550-4b35-981c-419689f6b780",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 99,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-21T04:53:30.115979"
+    },
+    "68f1624c-d529-428e-ad9a-bc9f3c7dcfa4": {
+        "transaction_id": "68f1624c-d529-428e-ad9a-bc9f3c7dcfa4",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 8,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-15T14:29:30.772557"
+    },
+    "b257a29e-3479-4631-9dc5-3127f4fb919c": {
+        "transaction_id": "b257a29e-3479-4631-9dc5-3127f4fb919c",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 14,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-10T16:39:25.643508"
+    },
+    "b6028d21-f7c3-405a-b725-f4cb5643a151": {
+        "transaction_id": "b6028d21-f7c3-405a-b725-f4cb5643a151",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 63,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-13T19:57:18.688585"
+    },
+    "15236ef6-bfe4-42fd-99d3-40db0ff1b32a": {
+        "transaction_id": "15236ef6-bfe4-42fd-99d3-40db0ff1b32a",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 3,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-21T11:14:41.247726"
+    },
+    "2aadae29-8de3-4905-98b2-ab1eb44c08c2": {
+        "transaction_id": "2aadae29-8de3-4905-98b2-ab1eb44c08c2",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 43,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-10T18:24:23.349323"
+    },
+    "8c19be59-4894-4faf-a31b-3d429b850be6": {
+        "transaction_id": "8c19be59-4894-4faf-a31b-3d429b850be6",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 45,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-08T22:35:57.114567"
+    },
+    "b561c7f5-07ee-4b9c-b3b8-45eca4fdd008": {
+        "transaction_id": "b561c7f5-07ee-4b9c-b3b8-45eca4fdd008",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 29,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-21T18:17:35.005980"
+    },
+    "7679e980-1633-4399-8678-b74225deede7": {
+        "transaction_id": "7679e980-1633-4399-8678-b74225deede7",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 4,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-28T01:51:04.698296"
+    },
+    "f4582cfd-4ad6-4c7e-aaea-3d53b5365eca": {
+        "transaction_id": "f4582cfd-4ad6-4c7e-aaea-3d53b5365eca",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 35,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-29T18:59:52.906723"
+    },
+    "309c871f-0579-427d-952d-9df455fea587": {
+        "transaction_id": "309c871f-0579-427d-952d-9df455fea587",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 100,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-23T08:55:40.548268"
+    },
+    "dfd377b2-a5a8-4c22-8ed8-dad3f55b0ec2": {
+        "transaction_id": "dfd377b2-a5a8-4c22-8ed8-dad3f55b0ec2",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 64,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-06T11:56:23.468028"
+    },
+    "11049378-58c6-4d12-98f7-5068d4471944": {
+        "transaction_id": "11049378-58c6-4d12-98f7-5068d4471944",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 55,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-18T20:50:02.255957"
+    },
+    "1170c9ae-1027-40a4-948a-43071ba1c6b3": {
+        "transaction_id": "1170c9ae-1027-40a4-948a-43071ba1c6b3",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 3,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-10T11:37:01.483636"
+    },
+    "af8f0b87-def3-4cb3-b4f3-6398e7af8ec1": {
+        "transaction_id": "af8f0b87-def3-4cb3-b4f3-6398e7af8ec1",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 14,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-17T05:35:45.570255"
+    },
+    "1e6126d2-7d22-4fe8-b5c1-a790af461025": {
+        "transaction_id": "1e6126d2-7d22-4fe8-b5c1-a790af461025",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 36,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-12T20:45:31.024920"
+    },
+    "27cb3217-68e2-474f-a29e-a9d8d08c8a4b": {
+        "transaction_id": "27cb3217-68e2-474f-a29e-a9d8d08c8a4b",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 28,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-27T20:10:00.989038"
+    },
+    "5fb72372-421a-4360-9683-8b277066c131": {
+        "transaction_id": "5fb72372-421a-4360-9683-8b277066c131",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 71,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-14T10:42:29.833018"
+    },
+    "f90629ac-0b01-46f0-94ed-9eaad7493a5c": {
+        "transaction_id": "f90629ac-0b01-46f0-94ed-9eaad7493a5c",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 14,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-12T12:22:57.523004"
+    },
+    "d2e980db-34b0-4382-93ea-0de47b57167a": {
+        "transaction_id": "d2e980db-34b0-4382-93ea-0de47b57167a",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 11,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-20T19:29:19.948432"
+    },
+    "54ccac46-77e8-4912-9b0a-25202af87eb6": {
+        "transaction_id": "54ccac46-77e8-4912-9b0a-25202af87eb6",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 71,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-15T20:19:56.473233"
+    },
+    "5554e189-54bc-483f-87c3-3b7062162b88": {
+        "transaction_id": "5554e189-54bc-483f-87c3-3b7062162b88",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 59,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-26T12:51:18.781854"
+    },
+    "2451ca29-4561-47fa-af4b-764dd7c97d4a": {
+        "transaction_id": "2451ca29-4561-47fa-af4b-764dd7c97d4a",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 31,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-20T21:09:18.867564"
+    },
+    "34f34e3d-4f70-49a6-9fc6-9e5343255a0b": {
+        "transaction_id": "34f34e3d-4f70-49a6-9fc6-9e5343255a0b",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 45,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-06T01:10:24.929116"
+    },
+    "837b8e3c-d776-4bdb-9ce6-88fa7c621b24": {
+        "transaction_id": "837b8e3c-d776-4bdb-9ce6-88fa7c621b24",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 35,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-14T16:57:31.523424"
+    },
+    "ff482832-54b9-4fd3-90b9-32f6fe01584c": {
+        "transaction_id": "ff482832-54b9-4fd3-90b9-32f6fe01584c",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 93,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-20T22:38:21.927772"
+    },
+    "aa53bfed-9a8e-4522-be69-3aa89a0a4bff": {
+        "transaction_id": "aa53bfed-9a8e-4522-be69-3aa89a0a4bff",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 19,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-21T20:02:42.203605"
+    },
+    "a877712e-9458-4a43-a950-5e1af12c521a": {
+        "transaction_id": "a877712e-9458-4a43-a950-5e1af12c521a",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 86,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-18T07:36:35.805004"
+    },
+    "00856316-c8c7-4f97-b6c3-f413986fc168": {
+        "transaction_id": "00856316-c8c7-4f97-b6c3-f413986fc168",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 7,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-21T21:16:27.353631"
+    },
+    "ef293e60-959b-401d-a598-0549f0370539": {
+        "transaction_id": "ef293e60-959b-401d-a598-0549f0370539",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 52,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-19T18:17:25.857146"
+    },
+    "992a0b3b-e174-4f18-930a-e35f55d6744c": {
+        "transaction_id": "992a0b3b-e174-4f18-930a-e35f55d6744c",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 4,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-10T15:17:02.073785"
+    },
+    "5bb5e824-0747-461c-8844-bf7a5258add7": {
+        "transaction_id": "5bb5e824-0747-461c-8844-bf7a5258add7",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 66,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-18T17:43:07.658508"
+    },
+    "ed750c65-5fd9-4cba-84c6-75d46ddb8437": {
+        "transaction_id": "ed750c65-5fd9-4cba-84c6-75d46ddb8437",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 19,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-26T03:06:41.019195"
+    },
+    "4dffc286-8fcb-443c-88e0-6db63577c1de": {
+        "transaction_id": "4dffc286-8fcb-443c-88e0-6db63577c1de",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 89,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-05T22:34:28.563608"
+    },
+    "e0364b6a-98e9-4a86-abed-364ee8f59140": {
+        "transaction_id": "e0364b6a-98e9-4a86-abed-364ee8f59140",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 20,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-22T17:36:23.894431"
+    },
+    "8caf5c33-d438-4a7a-baec-83d5d831d7d7": {
+        "transaction_id": "8caf5c33-d438-4a7a-baec-83d5d831d7d7",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 3,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-17T02:02:35.906587"
+    },
+    "c26bfeab-19d6-4349-bd44-79924d4ff434": {
+        "transaction_id": "c26bfeab-19d6-4349-bd44-79924d4ff434",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 17,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-29T18:35:52.548217"
+    },
+    "52c0434b-9626-4844-af87-3d6edf60ddb2": {
+        "transaction_id": "52c0434b-9626-4844-af87-3d6edf60ddb2",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 99,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-17T15:46:51.061755"
+    },
+    "7913ca9b-0104-4575-9411-7cc8e8f09878": {
+        "transaction_id": "7913ca9b-0104-4575-9411-7cc8e8f09878",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 28,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-29T09:07:54.249096"
+    },
+    "656ad90c-4d3e-421d-a9ea-a871bfd3eebd": {
+        "transaction_id": "656ad90c-4d3e-421d-a9ea-a871bfd3eebd",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 97,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-20T16:17:16.194783"
+    },
+    "f1a44441-c2a2-40b7-a630-418c1d517b2b": {
+        "transaction_id": "f1a44441-c2a2-40b7-a630-418c1d517b2b",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 53,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-13T16:58:05.365667"
+    },
+    "746e14f3-a3bc-4f92-acf2-b2b04dc4118b": {
+        "transaction_id": "746e14f3-a3bc-4f92-acf2-b2b04dc4118b",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 24,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-03T04:12:47.603788"
+    },
+    "2e40ec43-7e90-430c-941f-1163f681c0f3": {
+        "transaction_id": "2e40ec43-7e90-430c-941f-1163f681c0f3",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 66,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-23T11:04:31.737061"
+    },
+    "74b96801-f839-4ac5-98ad-3b9adeac2842": {
+        "transaction_id": "74b96801-f839-4ac5-98ad-3b9adeac2842",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 80,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-16T13:51:15.525630"
+    },
+    "10ebd878-270f-4d7c-8072-ca519634b66b": {
+        "transaction_id": "10ebd878-270f-4d7c-8072-ca519634b66b",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 31,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-22T15:15:58.611314"
+    },
+    "a41c5545-cf51-40de-9e9a-90bca0baab36": {
+        "transaction_id": "a41c5545-cf51-40de-9e9a-90bca0baab36",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 12,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-05T04:57:30.627742"
+    },
+    "7fb75c6c-df54-43e5-88ae-851b9c90b45a": {
+        "transaction_id": "7fb75c6c-df54-43e5-88ae-851b9c90b45a",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 94,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-04T14:31:08.586708"
+    },
+    "afb281e8-a545-47db-933b-8a2f4ea29dc4": {
+        "transaction_id": "afb281e8-a545-47db-933b-8a2f4ea29dc4",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 31,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-04T06:03:36.133812"
+    },
+    "a05a4366-2e3b-44d8-bffb-44654db0e28b": {
+        "transaction_id": "a05a4366-2e3b-44d8-bffb-44654db0e28b",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 38,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-12T15:42:49.300589"
+    },
+    "d7935bff-f8f0-4d1a-8855-3b66f724b5e8": {
+        "transaction_id": "d7935bff-f8f0-4d1a-8855-3b66f724b5e8",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 38,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-05T21:53:21.358622"
+    },
+    "824f9ffb-efea-4bf3-9c8f-3c6c655b7a83": {
+        "transaction_id": "824f9ffb-efea-4bf3-9c8f-3c6c655b7a83",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 90,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-16T05:17:55.818558"
+    },
+    "8e5dfbc5-6361-45e2-a3cc-72637c26ef89": {
+        "transaction_id": "8e5dfbc5-6361-45e2-a3cc-72637c26ef89",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 52,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-12T14:15:52.252613"
+    },
+    "94a0bc79-76f4-4160-a4ff-d56038090b8f": {
+        "transaction_id": "94a0bc79-76f4-4160-a4ff-d56038090b8f",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 58,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-01T01:54:37.593100"
+    },
+    "f7516da5-bceb-40d7-8a72-717285276eab": {
+        "transaction_id": "f7516da5-bceb-40d7-8a72-717285276eab",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 73,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-30T19:25:36.310643"
+    },
+    "77bba243-b3d5-42ac-a8b7-7d21b8fb7bd4": {
+        "transaction_id": "77bba243-b3d5-42ac-a8b7-7d21b8fb7bd4",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 31,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-17T04:15:31.133982"
+    },
+    "55804b94-ef66-4353-b260-5fe1924afea4": {
+        "transaction_id": "55804b94-ef66-4353-b260-5fe1924afea4",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 38,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-20T02:23:57.249811"
+    },
+    "d02512bb-979b-426d-abec-bde3d92f0d4e": {
+        "transaction_id": "d02512bb-979b-426d-abec-bde3d92f0d4e",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 35,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-13T03:06:10.373576"
+    },
+    "62ae9e1a-50cc-4cf7-9bdd-9b66f68b02d7": {
+        "transaction_id": "62ae9e1a-50cc-4cf7-9bdd-9b66f68b02d7",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 88,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-25T19:26:00.803997"
+    },
+    "33e22380-965e-43cf-89dc-de63760198c7": {
+        "transaction_id": "33e22380-965e-43cf-89dc-de63760198c7",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 61,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-04T05:00:32.812974"
+    },
+    "2962aba9-8991-4742-bbd8-c780282de5a5": {
+        "transaction_id": "2962aba9-8991-4742-bbd8-c780282de5a5",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 65,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-01T23:21:29.148453"
+    },
+    "daf85365-94c9-4186-b6a5-05d366021d93": {
+        "transaction_id": "daf85365-94c9-4186-b6a5-05d366021d93",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 37,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-03T16:51:29.683064"
+    },
+    "28ef99c0-673a-46af-b862-e8741f7d0233": {
+        "transaction_id": "28ef99c0-673a-46af-b862-e8741f7d0233",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 6,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-17T23:17:03.956242"
+    },
+    "cc656942-90f7-431a-b36d-20c492bea34d": {
+        "transaction_id": "cc656942-90f7-431a-b36d-20c492bea34d",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 96,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-01T12:34:52.487412"
+    },
+    "526f78f0-6c44-4841-b839-ac44319bea38": {
+        "transaction_id": "526f78f0-6c44-4841-b839-ac44319bea38",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 8,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-21T15:24:04.002715"
+    },
+    "03e93d18-6bd4-4545-a0a4-47afb7e66dcb": {
+        "transaction_id": "03e93d18-6bd4-4545-a0a4-47afb7e66dcb",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 70,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-07T00:22:19.793340"
+    },
+    "e0481d85-abde-41b5-ab83-18dad4ecb221": {
+        "transaction_id": "e0481d85-abde-41b5-ab83-18dad4ecb221",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 36,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-09T21:17:26.271900"
+    },
+    "14c056e9-57a3-4fad-9187-d0b85f14c376": {
+        "transaction_id": "14c056e9-57a3-4fad-9187-d0b85f14c376",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 23,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-27T21:24:58.339055"
+    },
+    "2b75062c-a3e5-401f-a98e-746cf6de8fae": {
+        "transaction_id": "2b75062c-a3e5-401f-a98e-746cf6de8fae",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 7,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-22T03:43:51.591769"
+    },
+    "f9e00245-aa23-4ff0-8099-b45a881b8d34": {
+        "transaction_id": "f9e00245-aa23-4ff0-8099-b45a881b8d34",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 97,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-18T02:44:01.506887"
+    },
+    "dc989ef2-3aa7-4f9c-a3b9-6f1ebc7c6bf2": {
+        "transaction_id": "dc989ef2-3aa7-4f9c-a3b9-6f1ebc7c6bf2",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 79,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-16T15:25:42.136652"
+    },
+    "a1d6bd8b-4707-41c8-8944-eea8f38eaeea": {
+        "transaction_id": "a1d6bd8b-4707-41c8-8944-eea8f38eaeea",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 81,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-17T05:32:31.485029"
+    },
+    "d43d31e8-e2a0-49e5-b3d1-83c501e1cbb6": {
+        "transaction_id": "d43d31e8-e2a0-49e5-b3d1-83c501e1cbb6",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 35,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-14T22:00:54.018353"
+    },
+    "5d746e10-27f8-4b5a-9447-a64381665644": {
+        "transaction_id": "5d746e10-27f8-4b5a-9447-a64381665644",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 94,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-07T07:35:05.201849"
+    },
+    "3da719e0-5d18-4825-9576-c6812841f065": {
+        "transaction_id": "3da719e0-5d18-4825-9576-c6812841f065",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 69,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-03T16:19:21.087702"
+    },
+    "8538e448-5f5e-4954-8ab6-99a10b6aac15": {
+        "transaction_id": "8538e448-5f5e-4954-8ab6-99a10b6aac15",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 68,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-19T13:18:21.622349"
+    },
+    "31498f76-658d-4e6f-ab3d-01fdb09d7ee8": {
+        "transaction_id": "31498f76-658d-4e6f-ab3d-01fdb09d7ee8",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 80,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-15T22:33:23.240276"
+    },
+    "a3f87452-9f48-47a5-9d67-cbe1067c861d": {
+        "transaction_id": "a3f87452-9f48-47a5-9d67-cbe1067c861d",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 95,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-18T02:14:24.813879"
+    },
+    "fa33e188-9c72-4fce-a395-2a9b0cb4d080": {
+        "transaction_id": "fa33e188-9c72-4fce-a395-2a9b0cb4d080",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 51,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-17T21:34:54.537992"
+    },
+    "629ffbd1-4899-4f66-baf2-4bfdf968caa5": {
+        "transaction_id": "629ffbd1-4899-4f66-baf2-4bfdf968caa5",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 79,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-21T15:16:33.718510"
+    },
+    "60b9db65-318b-4d73-9214-1e88d53cd0f7": {
+        "transaction_id": "60b9db65-318b-4d73-9214-1e88d53cd0f7",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 54,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-22T19:01:31.583162"
+    },
+    "ecfc1927-54b6-4b2c-b4bf-553a260d0bff": {
+        "transaction_id": "ecfc1927-54b6-4b2c-b4bf-553a260d0bff",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 70,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-07T10:22:58.085599"
+    },
+    "8a8d2911-6a1f-4ce0-b0be-014b118d37fc": {
+        "transaction_id": "8a8d2911-6a1f-4ce0-b0be-014b118d37fc",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 44,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-01T00:10:32.613490"
+    },
+    "3482aa29-649f-4b2e-9d2b-30b0f95333f3": {
+        "transaction_id": "3482aa29-649f-4b2e-9d2b-30b0f95333f3",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 99,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-12T07:01:52.274206"
+    },
+    "75a99358-0418-4e32-8634-80088f5eeb2b": {
+        "transaction_id": "75a99358-0418-4e32-8634-80088f5eeb2b",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 14,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-21T01:15:07.979236"
+    },
+    "5b8cf077-2c50-4b3c-b433-d5a4c0a13ffa": {
+        "transaction_id": "5b8cf077-2c50-4b3c-b433-d5a4c0a13ffa",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 58,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-12T08:49:37.526356"
+    },
+    "716a0d05-b721-4dbc-be4b-27f6e2df9fd9": {
+        "transaction_id": "716a0d05-b721-4dbc-be4b-27f6e2df9fd9",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 62,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-16T12:02:14.121249"
+    },
+    "c52d8e29-3885-4555-8852-f827803dd4ba": {
+        "transaction_id": "c52d8e29-3885-4555-8852-f827803dd4ba",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 58,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-13T15:21:34.671913"
+    },
+    "7634146d-c3f8-4ac2-bed8-292d37f3d510": {
+        "transaction_id": "7634146d-c3f8-4ac2-bed8-292d37f3d510",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 6,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-24T02:45:19.937598"
+    },
+    "ba10215e-7f10-41be-a91e-0cda3670ca56": {
+        "transaction_id": "ba10215e-7f10-41be-a91e-0cda3670ca56",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 33,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-20T16:37:33.812384"
+    },
+    "3031eaf1-4bd9-42a2-adaf-2e485d95e5d4": {
+        "transaction_id": "3031eaf1-4bd9-42a2-adaf-2e485d95e5d4",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 73,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-27T13:50:25.133919"
+    },
+    "68d70ac9-07ef-4868-914a-cb4de9d0e4a6": {
+        "transaction_id": "68d70ac9-07ef-4868-914a-cb4de9d0e4a6",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 3,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-18T09:08:14.281927"
+    },
+    "d5002834-4e2f-4c3e-90bb-d69716c898dc": {
+        "transaction_id": "d5002834-4e2f-4c3e-90bb-d69716c898dc",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 66,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-23T13:03:32.910094"
+    },
+    "932c6963-12e3-4734-ae67-16ea0e71ca6d": {
+        "transaction_id": "932c6963-12e3-4734-ae67-16ea0e71ca6d",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 64,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-02T08:57:49.446900"
+    },
+    "a0c07062-d8b8-46e1-ba25-f714c69ca71f": {
+        "transaction_id": "a0c07062-d8b8-46e1-ba25-f714c69ca71f",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 87,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-03T03:56:34.147390"
+    },
+    "df8e6238-52a0-4e56-8c01-55713cc69394": {
+        "transaction_id": "df8e6238-52a0-4e56-8c01-55713cc69394",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 83,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-22T02:49:18.898853"
+    },
+    "c4d47e41-112f-4bc2-a3fb-4307b8af1c71": {
+        "transaction_id": "c4d47e41-112f-4bc2-a3fb-4307b8af1c71",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 12,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-18T21:42:27.155323"
+    },
+    "98cac307-8934-4844-b2e0-6c0b7b02f300": {
+        "transaction_id": "98cac307-8934-4844-b2e0-6c0b7b02f300",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 59,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-27T16:50:02.924395"
+    },
+    "fc8e3795-ad98-4da9-9630-6ea42d0bf299": {
+        "transaction_id": "fc8e3795-ad98-4da9-9630-6ea42d0bf299",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 78,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-29T08:53:17.193913"
+    },
+    "3b5850f6-6aa1-4857-b475-9de255e0c2d2": {
+        "transaction_id": "3b5850f6-6aa1-4857-b475-9de255e0c2d2",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 77,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-18T01:56:22.490604"
+    },
+    "c1e710d3-f259-4268-8e81-674e8ecea44a": {
+        "transaction_id": "c1e710d3-f259-4268-8e81-674e8ecea44a",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 17,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-13T14:53:00.562366"
+    },
+    "9e6fa468-3023-47fb-9b6c-df5c5ed43bec": {
+        "transaction_id": "9e6fa468-3023-47fb-9b6c-df5c5ed43bec",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 42,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-14T18:20:54.269466"
+    },
+    "bb969378-633d-40de-bfc4-0732b8aeb03d": {
+        "transaction_id": "bb969378-633d-40de-bfc4-0732b8aeb03d",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 100,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-28T07:41:12.888545"
+    },
+    "469a928e-9ddb-4209-948f-c7e0580514e2": {
+        "transaction_id": "469a928e-9ddb-4209-948f-c7e0580514e2",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 63,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-08T12:31:28.434543"
+    },
+    "d6f822b2-cc03-4b3b-882f-e0b5a071f47b": {
+        "transaction_id": "d6f822b2-cc03-4b3b-882f-e0b5a071f47b",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 88,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-09T23:58:24.491326"
+    },
+    "f7336311-3c56-4d5a-9cae-1757dab59dfc": {
+        "transaction_id": "f7336311-3c56-4d5a-9cae-1757dab59dfc",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 18,
+        "transaction_type": "SELL",
+        "timestamp": "2024-12-08T07:59:35.754817"
+    },
+    "1e1748f2-1813-4acd-87ff-76b2cacf6b00": {
+        "transaction_id": "1e1748f2-1813-4acd-87ff-76b2cacf6b00",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 85,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-24T23:34:59.428729"
+    },
+    "7aef2e21-8ba6-4c58-bafb-12d88ba9c574": {
+        "transaction_id": "7aef2e21-8ba6-4c58-bafb-12d88ba9c574",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 81,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-15T20:05:03.013087"
+    },
+    "5199659a-d911-4780-912b-8e631ec60109": {
+        "transaction_id": "5199659a-d911-4780-912b-8e631ec60109",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 54,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-09T08:25:57.910065"
+    },
+    "c4b3b8e8-87a8-4c4b-a8d6-cdbeeccb8815": {
+        "transaction_id": "c4b3b8e8-87a8-4c4b-a8d6-cdbeeccb8815",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 64,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-21T00:48:51.420107"
+    },
+    "864af53a-60ac-4b44-8c59-376ca0f1785d": {
+        "transaction_id": "864af53a-60ac-4b44-8c59-376ca0f1785d",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "TGH",
+        "quantity": 25,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-25T23:24:47.475168"
+    },
+    "ef998d8c-3507-4f63-acf0-77ddade4bea0": {
+        "transaction_id": "ef998d8c-3507-4f63-acf0-77ddade4bea0",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 73,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-01T05:54:33.891656"
+    },
+    "fdf53a39-fd04-45de-baa3-f071016f72cf": {
+        "transaction_id": "fdf53a39-fd04-45de-baa3-f071016f72cf",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "VOI",
+        "quantity": 60,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-17T18:02:47.169668"
+    },
+    "e1e4d3a4-8bee-4d3b-b655-2815a497c447": {
+        "transaction_id": "e1e4d3a4-8bee-4d3b-b655-2815a497c447",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 16,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-30T05:12:27.230452"
+    },
+    "03f0ff89-de9a-41fe-913c-d4e6237f9510": {
+        "transaction_id": "03f0ff89-de9a-41fe-913c-d4e6237f9510",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 99,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-08T17:58:52.801482"
+    },
+    "df3cc142-2207-48f8-b1bc-c549f829d664": {
+        "transaction_id": "df3cc142-2207-48f8-b1bc-c549f829d664",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 13,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-23T02:54:32.015572"
+    },
+    "34ba4212-e794-420b-a786-2b975f45cd14": {
+        "transaction_id": "34ba4212-e794-420b-a786-2b975f45cd14",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "HOH",
+        "quantity": 6,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-29T22:49:14.369749"
+    },
+    "1ba412cd-32be-4d4c-a697-64fd7f0ce4e8": {
+        "transaction_id": "1ba412cd-32be-4d4c-a697-64fd7f0ce4e8",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 39,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-24T15:19:22.160028"
+    },
+    "4a7503a9-6bd0-468f-ad19-e941144fd805": {
+        "transaction_id": "4a7503a9-6bd0-468f-ad19-e941144fd805",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 13,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-29T22:10:26.179294"
+    },
+    "8289c9cc-7eb2-4486-b9ab-e165a9f20172": {
+        "transaction_id": "8289c9cc-7eb2-4486-b9ab-e165a9f20172",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 53,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-06T12:23:24.987188"
+    },
+    "f74addbb-8e6a-4d44-aa91-c9da71d30129": {
+        "transaction_id": "f74addbb-8e6a-4d44-aa91-c9da71d30129",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 58,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-14T10:53:26.502021"
+    },
+    "f6648698-c4c4-428a-918e-f058140edacf": {
+        "transaction_id": "f6648698-c4c4-428a-918e-f058140edacf",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "VOI",
+        "quantity": 83,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-04T23:46:54.570525"
+    },
+    "70bee7c3-4697-4018-a973-70526629abc5": {
+        "transaction_id": "70bee7c3-4697-4018-a973-70526629abc5",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 65,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-27T05:42:04.046007"
+    },
+    "3e20fa70-dfa6-43cb-add4-4545fa4b57b2": {
+        "transaction_id": "3e20fa70-dfa6-43cb-add4-4545fa4b57b2",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 38,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-16T03:03:48.210037"
+    },
+    "b54e6ee6-0e26-40a6-ad12-0de7e1714937": {
+        "transaction_id": "b54e6ee6-0e26-40a6-ad12-0de7e1714937",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "RBH",
+        "quantity": 12,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-01T17:54:31.648444"
+    },
+    "3c9d5a9b-e5e3-42a9-8061-1918a5b06767": {
+        "transaction_id": "3c9d5a9b-e5e3-42a9-8061-1918a5b06767",
+        "user_id": "QHrWvCXzryfIPze5dUzyVVOES4f1",
+        "stock_ticker": "TGH",
+        "quantity": 28,
+        "transaction_type": "BUY",
+        "timestamp": "2024-11-22T09:13:58.259813"
+    },
+    "d965edf1-4c93-45aa-ab27-8734621c6e15": {
+        "transaction_id": "d965edf1-4c93-45aa-ab27-8734621c6e15",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "HOH",
+        "quantity": 60,
+        "transaction_type": "BUY",
+        "timestamp": "2024-12-05T06:35:33.305539"
+    },
+    "ea393c61-0d1d-4043-89e0-ffd32e4cee01": {
+        "transaction_id": "ea393c61-0d1d-4043-89e0-ffd32e4cee01",
+        "user_id": "7gmGtCPGLUfmWa94l7Pnl2Eqbqq2",
+        "stock_ticker": "RBH",
+        "quantity": 80,
+        "transaction_type": "SELL",
+        "timestamp": "2024-11-22T09:33:39.103245"
+    }
+}
