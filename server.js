@@ -5,6 +5,7 @@ const ioredis = require('ioredis');
 const {processEvent} = require('./functions/proccessEvent');
 
 const engine = require('./engine');
+const savePortfolioValue = require('./functions/saveCurrentPortfolioValue');
 
 // Generate a random interval between 5 and 300 seconds
 const generateRandomInterval = () => {
@@ -27,6 +28,18 @@ const runEngine = async (time_passed) => {
 };
 
 runEngine(generateRandomInterval()).then(() => console.log('Engine started'));
+
+const runSavePortfolioValue = async () => {
+  try {
+    await savePortfolioValue.saveDailyPortfolioValues();
+    setTimeout(runSavePortfolioValue, 86400000); // Run every 24 hours
+  } catch (error) {
+    console.error('Error in runSavePortfolioValue:', error);
+    setTimeout(runSavePortfolioValue, 5000);
+  }
+}
+
+runSavePortfolioValue().then(() => console.log('Save Portfolio Value started'));
 
 // Configure CORS
 const corsOptions = {

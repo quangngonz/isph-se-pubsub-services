@@ -17,12 +17,13 @@ const moment = require('moment');
 
 const projectTransactions = async () => {
   // TODO: Create a function that projects transactions based on the current stock prices and the transactions data
+  // TODO: Merge the buy sell transactions with it's price
   const transactionsRef = ref(database, 'transactions');
   const transactionsSnapshot = await get(transactionsRef);
   const transactions = transactionsSnapshot.val();
 
   // console.log('Projecting transactions:', transactions);
-  
+
   let grouped_transactions = formatTransactions(transactions);
 
   const filteredTransactions = await getTransactionsAfterTime(grouped_transactions, moment().subtract(14, 'days'))

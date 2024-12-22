@@ -2,6 +2,7 @@ const {getEventWeights, getStocks} = require("./functions/server_data_fetcher");
 const {decayStocks, sumWeights} = require("./functions/manipulateStockPrices");
 const {projectTransactions} = require("./functions/priceProjectionTransactions");
 const {saveStocksPrices} = require("./services/dbService");
+const {saveDailyPortfolioValue} = require("./functions/saveCurrentPortfolioValue");
 
 // Mock Function randomise stock prices
 const randomiseStockPrices = (stocks, log = false) => {
