@@ -18,18 +18,14 @@ const projectTransactions = async () => {
   const transactionsSnapshot = await get(transactionsRef);
   const transactions = transactionsSnapshot.val();
 
-  // console.log('Projecting transactions:', transactions);
-
   let sortedTransactions = formatTransactions(transactions);
   logTransactions(sortedTransactions, 'Sorted transactions:');
 
   const filteredTransactions = await getTransactionsAfterTime(sortedTransactions, moment().subtract(14, 'days'))
   logTransactions(filteredTransactions, 'Transactions in the last 2 weeks:');
 
-  // console.log('Grouped transactions:', grouped_transactions);
-  // console.log('Transactions in the last 2 weeks:', filteredTransactions);
-  console.log('Total transactions:', await getTotalTransactions(filteredTransactions));
-
+  console.log('Total transactions in the last 2 weeks:', await getTotalTransactions(filteredTransactions));
+  console.log('Total transactions:', await getTotalTransactions(transactions));
   return transactions
 }
 
