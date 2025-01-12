@@ -63,4 +63,8 @@ function generateProjectionPrompt(event, stockList) {
   `;
 }
 
+function generateTransactionsEvaluationPrompt(transactions, stockList) {
+  return "";
+}
+
 module.exports = {generateEvalPrompt, generateProjectionPrompt};

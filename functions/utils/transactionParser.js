@@ -1,42 +1,33 @@
 const moment = require('moment');
+const Table = require('cli-table3');
 
 /**
- * Format transactions by grouping them by timestamp.
+ * Format transactions by sorted by timestamp.
  * @param transactions : object transactions
- * @returns {{}} transactions grouped by timestamp
+ * @returns {} transactions sorted by timestamp
  */
 const formatTransactions = (transactions) => {
-  let grouped_transactions = {};
-
-  // Group transactions by timestamp
-  for (const transaction_id in transactions) {
-    const transaction = transactions[transaction_id];
-    const timestamp = transaction.timestamp;
-
-    if (!grouped_transactions[timestamp]) {
-      grouped_transactions[timestamp] = [];
-    }
-
-    grouped_transactions[timestamp].push(transaction);
-  }
-  return grouped_transactions;
+  // Sort transactions by timestamp
+  return Object.values(transactions).sort((a, b) => {
+    return moment(a['timestamp']).diff(moment(b['timestamp']));
+  })
 }
 
 /**
  * Get transactions within a specified timeframe.
- * @param groupedTransactions : object transactions grouped by timestamp
+ * @param sortedTransactions : object transactions sorted by timestamp
  * @param cutOffTime : moment.Moment cut-off time
  * @returns {Promise<[]>} transactions within the specified timeframe
  */
-const getTransactionsAfterTime = async (groupedTransactions, cutOffTime) => {
+const getTransactionsAfterTime = async (sortedTransactions, cutOffTime) => {
   // console.log('Cut-off timestamp:', cutOffTime.format()); // Format for readable output
 
   const transactions = [];
 
-  for (const timestamp in groupedTransactions) {
-    const time = moment(timestamp); // Parse timestamp as a Moment object
-    if (time.isSameOrAfter(cutOffTime)) {
-      transactions.push(...groupedTransactions[timestamp]);
+  for (const transaction of sortedTransactions) {
+    const transaction_timestamp = moment(transaction['timestamp']);
+    if (transaction_timestamp.isAfter(cutOffTime)) {
+      transactions.push(transaction);
     }
   }
 
@@ -59,8 +50,8 @@ const getTotalTransactions = async (trimmedTransactions) => {
 
     if (!totalTransactions[stock_ticker]) {
       totalTransactions[stock_ticker] = {
-        'BUY': 0,
-        'SELL': 0
+        'buy': 0,
+        'sell': 0
       };
     }
     totalTransactions[stock_ticker][transaction_type] += quantity;
@@ -69,4 +60,28 @@ const getTotalTransactions = async (trimmedTransactions) => {
   return totalTransactions;
 }
 
-module.exports = {getTransactionsAfterTime, getTotalTransactions, formatTransactions};
+/**
+ * Log transactions to the console.
+ * @param filteredTransactions : object transactions
+ * @param title : string - title of the table
+ */
+const logTransactions = (filteredTransactions, title = NaN) => {
+  // Table log for transactions using keys from the first transaction
+  const table_filtered = new Table({
+    head: Object.keys(filteredTransactions[0])
+  });
+
+  filteredTransactions.forEach(transaction => {
+    transaction['timestamp'] = moment(transaction['timestamp']).format('YYYY-MM-DD HH:mm:ss');
+    table_filtered.push(Object.values(transaction));
+  });
+
+  if (title) {
+    console.log(title);
+  }
+
+  console.log(table_filtered.toString());
+}
+
+
+module.exports = {getTransactionsAfterTime, getTotalTransactions, formatTransactions, logTransactions};

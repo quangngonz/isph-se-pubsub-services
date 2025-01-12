@@ -1,4 +1,4 @@
-const {generateEvaluation, projectEffectiveness} = require('../services/evaluationService');
+const {generateEvaluation, projectEffectiveness} = require('../services/evaluation/eventEvaluation');
 const {getEventData, saveEvaluation, saveProjection, updateEventStatus} = require('../services/dbService');
 
 /**

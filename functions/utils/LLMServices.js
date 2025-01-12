@@ -2,6 +2,8 @@ const OpenAI = require('openai');
 const {GoogleGenerativeAI} = require('@google/generative-ai');
 
 const dotenv = require('dotenv');
+const {ref, get} = require("firebase/database");
+const {database} = require("../../services/firebaseService");
 dotenv.config();
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -70,6 +72,7 @@ async function generateEvaluationGemini(prompt) {
 
     // Extract and return the text response
     // Extract between ```json and ```
+    // TODO: Use structured response from Gemini
     const response = result.response.text().trim();
     const start = response.indexOf('```json') + 7;
     const end = response.indexOf('```', start);
@@ -92,4 +95,24 @@ async function generateEvaluationGemini(prompt) {
   }
 }
 
-module.exports = {generateEvaluationOpenAI, generateEvaluationGemini};
+const getStockList = async () => {
+  // Get stock list from /stocks endpoint
+  const stocksRef = ref(database, 'stocks');
+  const snapshot = await get(stocksRef);
+
+  if (!snapshot.exists()) {
+    return 'Error: No stock list found.';
+  }
+
+  const stockList = Object.keys(snapshot.val());
+  let stock_list = [];
+  for (let i = 0; i < stockList.length; i++) {
+    let ticker = stockList[i];
+    let name = snapshot.val()[ticker]['full_name'];
+    stock_list.push(`${ticker} : ${name}`);
+  }
+
+  return stock_list;
+};
+
+module.exports = {generateEvaluationOpenAI, generateEvaluationGemini, getStockList};
