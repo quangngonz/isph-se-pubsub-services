@@ -6,6 +6,7 @@ const {processEvent} = require('./functions/proccessEvent');
 
 const engine = require('./engine');
 const savePortfolioValue = require('./functions/saveCurrentPortfolioValue');
+const {generateBangerHeadline} = require("./services/evaluation/eventEvaluation");
 
 // Generate a random interval between 5 and 300 seconds
 const generateRandomInterval = () => {
@@ -90,6 +91,15 @@ subscriber.subscribe('event-projection-queue', (err, count) => {
   console.log(`Subscribed to ${count} channel(s)`);
 });
 
+subscriber.subscribe('generate-banger-headline-queue', (err, count) => {
+  if (err) {
+    console.error('Error subscribing to Redis channel', err);
+    return;
+  }
+  console.log(`Listening to 'generate-banger-headline-queue' channel`);
+  console.log(`Subscribed to ${count} channel(s)`);
+});
+
 // Listen for messages in the Redis queue
 subscriber.on('message', async (channel, message) => {
   console.log(`Received message from ${channel}: ${message}`);
@@ -100,6 +110,12 @@ subscriber.on('message', async (channel, message) => {
 
   if (channel === 'event-projection-queue') {
     console.log('Projection task received:', message);
+  }
+
+  if (channel === 'generate-banger-headline-queue') {
+    console.log('Banger headline task received:', message);
+    generateBangerHeadline(message);
+
   }
 });
 
@@ -117,6 +133,22 @@ app.post('/trigger-task', async (req, res) => {
   try {
     const message = {eventId};
     await publisher.publish('event-evaluation-queue', JSON.stringify(message));
+    res.status(200).send('Task triggered');
+  } catch (error) {
+    res.status(500).send(`Error triggering task: ${error.message}`);
+  }
+});
+
+app.post('/generate-banger-headline', async (req, res) => {
+  const {eventId} = req.body; // Extract from JSON payload
+
+  if (!eventId) {
+    return res.status(400).send('Missing eventId query parameter');
+  }
+
+  try {
+    const message = {eventId};
+    await publisher.publish('generate-banger-headline-queue', JSON.stringify(message));
     res.status(200).send('Task triggered');
   } catch (error) {
     res.status(500).send(`Error triggering task: ${error.message}`);

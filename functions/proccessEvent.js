@@ -1,4 +1,8 @@
-const {generateEvaluation, projectEffectiveness} = require('../services/evaluation/eventEvaluation');
+const {
+  generateEvaluation,
+  projectEffectiveness,
+  generateBangerHeadline
+} = require('../services/evaluation/eventEvaluation');
 const {getEventData, saveEvaluation, saveProjection, updateEventStatus} = require('../services/dbService');
 
 /**
@@ -27,10 +31,13 @@ const processEvent = async (message) => {
     const evaluation = await generateEvaluation(eventData);
     await new Promise(resolve => setTimeout(resolve, 10000));
     const projection = await projectEffectiveness(eventData);
+    await new Promise(resolve => setTimeout(resolve, 10000));
+    const headline = await generateBangerHeadline({'eventId': eventId});
     await new Promise(resolve => setTimeout(resolve, 60000));
 
     console.log('Evaluation result:', {evaluation});
     console.log('Projection result:', {projection});
+    console.log('Banger headline:', {headline});
 
     await saveEvaluation(eventId, evaluation);
     await saveProjection(eventId, projection);

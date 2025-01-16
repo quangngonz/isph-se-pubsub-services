@@ -115,4 +115,61 @@ const getStockList = async () => {
   return stock_list;
 };
 
-module.exports = {generateEvaluationOpenAI, generateEvaluationGemini, getStockList};
+async function generateBangerHeadlineGemini(prompt) {
+  try {
+    console.log('Generating banger headline with Gemini');
+
+    const generationConfig = {
+      temperature: 1,
+      topP: 0.95,
+      topK: 40,
+      maxOutputTokens: 8192,
+      responseMimeType: "application/json",
+      responseSchema: {
+        type: "object",
+        properties: {
+          response: {
+            type: "object",
+            properties: {
+              headline: {
+                type: "string"
+              },
+              tags: {
+                type: "array",
+                items: {
+                  type: "string"
+                }
+              }
+            },
+            required: ["headline", "tags"]
+          }
+        },
+        required: ["response"]
+      },
+    };
+
+    const chatSession = model.startChat({
+      generationConfig,
+      history: [],
+    });
+
+    // Send the prompt and get the result
+    const result = await chatSession.sendMessage(prompt);
+
+    // Extract the JSON response
+    const jsonResponse = JSON.parse(result.response.text());
+    console.log(jsonResponse);
+
+    // Ensure the returned JSON contains the expected structure
+    if (jsonResponse.response && jsonResponse.response.headline && jsonResponse.response.tags) {
+      return jsonResponse.response;
+    } else {
+      console.error('Invalid response structure:', jsonResponse);
+    }
+  } catch (error) {
+    console.error('Error:', error.message || error);
+    return {headline: "", tags: []}; // Default fallback
+  }
+}
+
+module.exports = {generateEvaluationOpenAI, generateEvaluationGemini, generateBangerHeadlineGemini, getStockList};

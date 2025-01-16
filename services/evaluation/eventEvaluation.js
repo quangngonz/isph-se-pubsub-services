@@ -1,8 +1,13 @@
 const {database} = require('../firebaseService');
-const {ref, get} = require('firebase/database');
+const {ref, set, get} = require('firebase/database');
 
 const {generateEvalPrompt, generateProjectionPrompt} = require('../../functions/utils/promptGenerationService');
-const {generateEvaluationOpenAI, generateEvaluationGemini, getStockList} = require('../../functions/utils/LLMServices');
+const {
+  generateEvaluationOpenAI,
+  generateEvaluationGemini,
+  generateBangerHeadlineGemini,
+  getStockList
+} = require('../../functions/utils/LLMServices');
 
 const USE_LLM = process.env.USE_LLM || 'openai';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -60,4 +65,34 @@ async function projectEffectiveness(event) {
   return projection;
 }
 
-module.exports = {generateEvaluation, projectEffectiveness};
+/**
+ * Generate a banger headline for the event.
+ * @param message - The event data.
+ * @returns {Promise<string|string>}
+ */
+async function generateBangerHeadline(message) {
+  const taskData = JSON.parse(message);
+  const {eventId} = taskData;
+
+  const eventRef = ref(database, `events/${eventId}`);
+  const snapshot = await get(eventRef);
+
+  if (!snapshot.exists()) {
+    console.error('Event not found', {eventId});
+    return 'Event not found';
+  }
+
+  const event = snapshot.val();
+
+  const prompt = `Generate a banger/click-baiting short headline for the event of the student/staff/member of The Interational School @ PArkCity Hanoi (ISPH): \n\nTITLE: ${event.event_description} \nDescription: ${event.description}.`;
+
+  const headline = await generateBangerHeadlineGemini(prompt);
+
+  // Save the headline to the database
+  const headlineRef = ref(database, `events/${eventId}/headline`);
+  await set(headlineRef, headline);
+
+  return headline;
+}
+
+module.exports = {generateEvaluation, projectEffectiveness, generateBangerHeadline};
